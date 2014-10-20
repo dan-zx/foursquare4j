@@ -1,0 +1,10 @@
+{
+   "meta":{
+      "code":410,
+      "errorType":"param_error",
+      "errorDetail":"The Foursquare API no longer supports requests that do not pass in a version parameter. For more details see https:\/\/developer.foursquare.com\/overview\/versioning"
+   },
+   "response":{
+
+   }
+}

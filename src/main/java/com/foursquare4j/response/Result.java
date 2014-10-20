@@ -1,0 +1,93 @@
+package com.foursquare4j.response;
+
+import java.util.Objects;
+
+public abstract class Result<T extends FoursquareResponse> {
+
+    public static class Meta {
+
+        private Integer code;
+        private String errorType;
+        private String errorDetail;
+
+        public Integer getCode() {
+            return code;
+        }
+
+        public String getErrorType() {
+            return errorType;
+        }
+
+        public String getErrorDetail() {
+            return errorDetail;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(code, errorType, errorDetail);
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) return true;
+            if (obj == null) return false;
+            if (getClass() != obj.getClass()) return false;
+            Meta other = (Meta) obj;
+            if (code == null) {
+                if (other.code != null) return false;
+            } else if (!code.equals(other.code)) return false;
+            if (errorDetail == null) {
+                if (other.errorDetail != null) return false;
+            } else if (!errorDetail.equals(other.errorDetail)) return false;
+            if (errorType == null) {
+                if (other.errorType != null) return false;
+            } else if (!errorType.equals(other.errorType)) return false;
+            return true;
+        }
+
+        @Override
+        public String toString() {
+            return new StringBuilder().append("Meta [code=").append(code).append(", errorType=")
+                    .append(errorType).append(", errorDetail=").append(errorDetail).append("]")
+                    .toString();
+        }
+    }
+
+    private Meta meta;
+    private T response;
+
+    public Meta getMeta() {
+        return meta;
+    }
+
+    public T getResponse() {
+        return response;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(meta, response);
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
+        Result<T> other = (Result<T>) obj;
+        if (meta == null) {
+            if (other.meta != null) return false;
+        } else if (!meta.equals(other.meta)) return false;
+        if (response == null) {
+            if (other.response != null) return false;
+        } else if (!response.equals(other.response)) return false;
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return new StringBuilder().append("Response [meta=").append(meta).append(", response=")
+                .append(response).append("]").toString();
+    }
+}
