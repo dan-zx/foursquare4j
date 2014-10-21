@@ -2,7 +2,7 @@ package com.foursquare4j.response;
 
 import java.util.Objects;
 
-public abstract class Result<T extends FoursquareResponse> {
+public class Result<T extends FoursquareResponse> {
 
     public static class Meta {
 
@@ -14,12 +14,24 @@ public abstract class Result<T extends FoursquareResponse> {
             return code;
         }
 
+        protected void setCode(Integer code) {
+            this.code = code;
+        }
+
         public String getErrorType() {
             return errorType;
         }
 
+        protected void setErrorType(String errorType) {
+            this.errorType = errorType;
+        }
+
         public String getErrorDetail() {
             return errorDetail;
+        }
+
+        protected void setErrorDetail(String errorDetail) {
+            this.errorDetail = errorDetail;
         }
 
         @Override
@@ -60,8 +72,16 @@ public abstract class Result<T extends FoursquareResponse> {
         return meta;
     }
 
+    protected void setMeta(Meta meta) {
+        this.meta = meta;
+    }
+
     public T getResponse() {
         return response;
+    }
+
+    protected void setResponse(T response) {
+        this.response = response;
     }
 
     @Override
