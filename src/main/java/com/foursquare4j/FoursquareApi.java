@@ -62,7 +62,7 @@ public class FoursquareApi {
                 .addParameter("client_id", clientId)
                 .addParameter("client_secret", clientSecret)
                 .addParameter("v", VERSION);
-        if (isAuthenticated()) uriBuilder.addParameter("oauth_token", accessToken);
+        if (accessToken != null) uriBuilder.addParameter("oauth_token", accessToken);
         String json = new RequestBuilder(uriBuilder.toString())
             .setMethod(Method.GET)
             .setDefaultHeaders()
@@ -79,7 +79,7 @@ public class FoursquareApi {
                 .addParameter("client_id", clientId)
                 .addParameter("client_secret", clientSecret)
                 .addParameter("v", VERSION);
-        if (isAuthenticated()) uriBuilder.addParameter("oauth_token", accessToken);
+        if (accessToken != null) uriBuilder.addParameter("oauth_token", accessToken);
         String json = new RequestBuilder(uriBuilder.toString())
             .setMethod(Method.GET)
             .setDefaultHeaders()
@@ -115,7 +115,7 @@ public class FoursquareApi {
                 .addParameter("client_id", clientId)
                 .addParameter("client_secret", clientSecret)
                 .addParameter("v", VERSION);
-        if (isAuthenticated()) uriBuilder.addParameter("oauth_token", accessToken);
+        if (accessToken != null) uriBuilder.addParameter("oauth_token", accessToken);
         if (ll != null) uriBuilder.addParameter("ll", ll);
         if (near != null) uriBuilder.addParameter("near", near);
         if (llAcc != null) uriBuilder.addParameter("llAcc", String.valueOf(llAcc));
@@ -163,10 +163,6 @@ public class FoursquareApi {
     private String getString(String key, Object... params) {
         if (params.length > 0) return MessageFormat.format(urls.getProperty(key), params);
         else return urls.getProperty(key);
-    }
-
-    private boolean isAuthenticated() {
-        return accessToken != null && !accessToken.trim().isEmpty();
     }
 
     private URIBuilder newUriBuilder(String url) {

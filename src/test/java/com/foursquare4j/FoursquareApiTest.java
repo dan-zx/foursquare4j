@@ -2,6 +2,10 @@ package com.foursquare4j;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 import com.foursquare4j.response.Category;
 import com.foursquare4j.response.Result;
 import com.foursquare4j.response.User;
@@ -16,8 +20,9 @@ public class FoursquareApiTest {
 
     @Before
     public void setUp() throws Exception {
-        foursquareApi = new FoursquareApi("B4BRRJR2DUYMKFHJEYFUF24QXWSJKA4XGMHOELJEQOW2XTAG", "ZNVGEZGTIGNDGTDQSD3ZYAKZWS0HTJNE3DMFIMOPS4WWEXVX");
-        //foursquareApi.setAccessToken("AZLJIU2XC1QANMQH45WQSPW132JNOSUAPLIIRJSCEUN4YEYY");
+        Properties configs = loadConfigProperties();
+        foursquareApi = new FoursquareApi(configs.getProperty("foursquare.app.client_id"), configs.getProperty("foursquare.app.client_secret"));
+        foursquareApi.setAccessToken(configs.getProperty("foursquare.app.access_token"));
     }
     
     @Test
@@ -58,5 +63,21 @@ public class FoursquareApiTest {
         assertThat(actualResult.getMeta()).isNotNull();
         assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
         assertThat(actualResult.getResponse()).isNotNull().isNotEmpty().hasSize(5);
+    }
+
+    private Properties loadConfigProperties() {
+        Properties configs = new Properties();
+        InputStream stream = null;
+        try {
+            stream = this.getClass().getResourceAsStream("/fsq-configs.properties");
+            configs.load(stream);
+            return configs;
+        } catch (IOException ex) { 
+            return null;
+        } finally {
+            try {
+                stream.close();
+            } catch (IOException ex) { }
+        }
     }
 }
