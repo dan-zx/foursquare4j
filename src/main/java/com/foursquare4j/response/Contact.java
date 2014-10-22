@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Contact implements FoursquareResponse {
+public class Contact {
 
     private String email;
     private String facebook;

@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Comment implements FoursquareResponse {
+public class Comment {
 
     private String id;
     private Long createdAt;

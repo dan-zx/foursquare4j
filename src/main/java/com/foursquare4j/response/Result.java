@@ -2,7 +2,7 @@ package com.foursquare4j.response;
 
 import java.util.Objects;
 
-public class Result<T extends FoursquareResponse> {
+public class Result<T> {
 
     public static class Meta {
 

@@ -2,7 +2,7 @@ package com.foursquare4j.response;
 
 import java.util.Arrays;
 
-public class Category implements FoursquareResponse {
+public class Category {
 
     private String id;
     private String name;

@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Stats implements FoursquareResponse {
+public class Stats {
 
     private Integer checkinsCount;
     private Integer usersCount;

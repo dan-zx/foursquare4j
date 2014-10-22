@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Photo implements FoursquareResponse {
+public class Photo {
 
     private String id;
     private Long createdAt;

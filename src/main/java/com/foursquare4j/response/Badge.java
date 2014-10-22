@@ -2,9 +2,9 @@ package com.foursquare4j.response;
 
 import java.util.Arrays;
 
-public class Badge implements FoursquareResponse {
+public class Badge {
 
-    public static class Image implements FoursquareResponse {
+    public static class Image {
 
         private String prefix;
         private Integer[] sizes;
@@ -68,7 +68,7 @@ public class Badge implements FoursquareResponse {
         }
     }
 
-    public static class Unlock implements FoursquareResponse {
+    public static class Unlock {
 
         private Checkin[] checkins;
 

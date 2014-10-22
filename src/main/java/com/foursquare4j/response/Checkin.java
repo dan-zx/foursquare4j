@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Checkin implements FoursquareResponse {
+public class Checkin {
 
     private String id;
     private String type;

@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Event implements FoursquareResponse {
+public class Event {
 
     private String id;
     private String name;

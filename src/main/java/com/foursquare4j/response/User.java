@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class User implements FoursquareResponse {
+public class User {
 
     private String id;
     private String firstName;

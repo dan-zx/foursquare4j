@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Scores implements FoursquareResponse {
+public class Scores {
 
     private Long total;
     private Long scores;

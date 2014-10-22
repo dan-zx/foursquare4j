@@ -2,9 +2,9 @@ package com.foursquare4j.response;
 
 import java.util.Arrays;
 
-public class List implements FoursquareResponse {
+public class List {
 
-    public class Item implements FoursquareResponse {
+    public class Item {
 
         private String id;
         private User user;

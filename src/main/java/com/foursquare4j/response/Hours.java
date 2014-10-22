@@ -2,11 +2,11 @@ package com.foursquare4j.response;
 
 import java.util.Arrays;
 
-public class Hours implements FoursquareResponse {
+public class Hours {
 
-    public static class Timeframe implements FoursquareResponse {
+    public static class Timeframe {
 
-        public static class RenderedTime implements FoursquareResponse {
+        public static class RenderedTime {
 
             private String renderedTime;
 

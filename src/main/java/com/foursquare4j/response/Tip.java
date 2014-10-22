@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Tip implements FoursquareResponse {
+public class Tip {
 
     private String id;
     private String text;

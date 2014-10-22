@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Source implements FoursquareResponse {
+public class Source {
 
     private String name;
     private String url;

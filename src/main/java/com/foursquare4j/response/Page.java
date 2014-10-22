@@ -1,8 +1,8 @@
 package com.foursquare4j.response;
 
-public class Page implements FoursquareResponse {
+public class Page {
 
-    public static class Link implements FoursquareResponse {
+    public static class Link {
 
         private String title;
         private String url;

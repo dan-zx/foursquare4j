@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class Phrase extends Count {
 
-    public static class SampleTip implements FoursquareResponse {
+    public static class SampleTip {
 
-        public static class Entity implements FoursquareResponse {
+        public static class Entity {
 
             private Integer[] indices;
             private String type;

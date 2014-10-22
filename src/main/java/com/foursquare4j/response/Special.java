@@ -2,7 +2,7 @@ package com.foursquare4j.response;
 
 import java.util.Arrays;
 
-public class Special implements FoursquareResponse {
+public class Special {
 
     private String id;
     private String type;

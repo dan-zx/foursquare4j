@@ -20,6 +20,7 @@ public class ParserTest {
         Result<User> expectedResult = new Result<>();
         expectedResult.setMeta(expectedMeta);
         Result<User> actualResult = Parser.parse(json, "user", User.class);
+
         assertThat(actualResult).isNotNull().isEqualTo(expectedResult);
     }
 
@@ -27,8 +28,10 @@ public class ParserTest {
     public void testParseUser() throws Exception {
         String json = getJsonFrom("responses/user.json");
         Result<User> actualResult = Parser.parse(json, "user", User.class);
+
         assertThat(actualResult).isNotNull();
-        assertThat(actualResult.getMeta().getCode()).isEqualTo(200);
+        assertThat(actualResult.getMeta()).isNotNull();
+        assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
         assertThat(actualResult.getResponse()).isNotNull();
     }
     
@@ -36,8 +39,10 @@ public class ParserTest {
     public void testParseVenue() throws Exception {
         String json = getJsonFrom("responses/venue.json");
         Result<Venue> actualResult = Parser.parse(json, "venue", Venue.class);
+
         assertThat(actualResult).isNotNull();
-        assertThat(actualResult.getMeta().getCode()).isEqualTo(200);
+        assertThat(actualResult.getMeta()).isNotNull();
+        assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
         assertThat(actualResult.getResponse()).isNotNull();
     }
 

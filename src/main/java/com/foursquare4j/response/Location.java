@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Location implements FoursquareResponse {
+public class Location {
 
     private String name;
     private String address;

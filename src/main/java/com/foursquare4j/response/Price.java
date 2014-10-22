@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Price implements FoursquareResponse {
+public class Price {
 
     private Integer tier;
     private String message;

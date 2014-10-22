@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class AttributeGroups extends Count {
 
-    public static class Attribute implements FoursquareResponse {
+    public static class Attribute {
 
         private String displayName;
         private String displayValue;

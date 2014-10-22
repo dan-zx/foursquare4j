@@ -1,6 +1,6 @@
 package com.foursquare4j.response;
 
-public class Menu implements FoursquareResponse {
+public class Menu {
 
     private String url;
     private String mobileUrl;
