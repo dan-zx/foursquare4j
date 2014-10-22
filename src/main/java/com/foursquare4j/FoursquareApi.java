@@ -92,7 +92,7 @@ public class FoursquareApi {
 
     public Result<Category[]> getCategories() {
         String url = newUriBuilder(getString("foursquare.api.url"))
-                .setPath(getString("foursquare.api.path.categories"))
+                .setPath(getString("foursquare.api.path.venue_categories"))
                 .addParameter("client_id", clientId)
                 .addParameter("client_secret", clientSecret)
                 .addParameter("v", VERSION)
@@ -105,6 +105,40 @@ public class FoursquareApi {
             .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, "categories", Category[].class);
+    }
+
+    public Result<Venue[]> searchVenues(String ll, String near, Double llAcc, Integer alt, 
+            Double altAcc, String query, Integer limit, String intent, Integer radius, String sw, 
+            String ne, String categoryId, String url, String providerId, String linkedId) {
+        URIBuilder uriBuilder = newUriBuilder(getString("foursquare.api.url"))
+                .setPath(getString("foursquare.api.path.search_venues"))
+                .addParameter("client_id", clientId)
+                .addParameter("client_secret", clientSecret)
+                .addParameter("v", VERSION);
+        if (isAuthenticated()) uriBuilder.addParameter("oauth_token", accessToken);
+        if (ll != null) uriBuilder.addParameter("ll", ll);
+        if (near != null) uriBuilder.addParameter("near", near);
+        if (llAcc != null) uriBuilder.addParameter("llAcc", String.valueOf(llAcc));
+        if (alt != null) uriBuilder.addParameter("alt", String.valueOf(alt));
+        if (altAcc != null) uriBuilder.addParameter("altAcc", String.valueOf(altAcc));
+        if (query != null) uriBuilder.addParameter("query", query);
+        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
+        if (intent != null) uriBuilder.addParameter("intent", intent);
+        if (radius != null) uriBuilder.addParameter("radius", String.valueOf(radius));
+        if (sw != null) uriBuilder.addParameter("sw", sw);
+        if (ne != null) uriBuilder.addParameter("ne", ne);
+        if (categoryId != null) uriBuilder.addParameter("categoryId", categoryId);
+        if (url != null) uriBuilder.addParameter("url", url);
+        if (providerId != null) uriBuilder.addParameter("providerId", providerId);
+        if (linkedId != null) uriBuilder.addParameter("linkedId", linkedId);
+        String json = new RequestBuilder(uriBuilder.toString())
+            .setMethod(Method.GET)
+            .setDefaultHeaders()
+            .addHeader(Header.ACCEPT, ContentType.APPLICATION_JSON.getMimeType())
+            .addHeader(Header.ACCEPT_CHARSET, StandardCharsets.UTF_8.name())
+            .callForResult();
+        LOGGER.debug("Response ---> {}", json);
+        return Parser.parse(json, "venues", Venue[].class);
     }
     
     public void setAccessToken(String accessToken) {
