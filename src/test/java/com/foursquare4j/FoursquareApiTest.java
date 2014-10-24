@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 import com.foursquare4j.response.Category;
+import com.foursquare4j.response.ExploreVenueGroups;
 import com.foursquare4j.response.Result;
 import com.foursquare4j.response.User;
 import com.foursquare4j.response.Venue;
@@ -62,7 +63,19 @@ public class FoursquareApiTest {
         assertThat(actualResult).isNotNull();
         assertThat(actualResult.getMeta()).isNotNull();
         assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
-        assertThat(actualResult.getResponse()).isNotNull().isNotEmpty().hasSize(5);
+        assertThat(actualResult.getResponse()).isNotNull().isNotEmpty();
+    }
+
+    @Test
+    public void testExploreVenues()throws Exception {
+        Result<ExploreVenueGroups> actualResult = foursquareApi.exploreVenues("19.026731,-98.234854", null, null, null, null, 1000, null, null, 5, null, null, null, null, null, null, null, null, null, null, null, null);
+
+        assertThat(actualResult).isNotNull();
+        assertThat(actualResult.getMeta()).isNotNull();
+        assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
+        assertThat(actualResult.getResponse()).isNotNull();
+        assertThat(actualResult.getResponse().getGroups()).isNotNull().isNotEmpty();
+
     }
 
     private Properties loadConfigProperties() {

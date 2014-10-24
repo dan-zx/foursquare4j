@@ -36,10 +36,10 @@ public class Venue {
     private Boolean dislike;
     private Phrase[] phrases;
     private AttributeGroups attributes;
-
     // TODO: private ? roles
     // TODO: private ? flags
     // TODO: private ? page
+
     public String getId() {
         return id;
     }

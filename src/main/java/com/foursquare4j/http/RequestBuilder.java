@@ -22,11 +22,11 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.conn.ConnectTimeoutException;
+import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -95,6 +95,12 @@ public class RequestBuilder {
     public RequestBuilder setDefaultHeaders() {
         String clientAcceptLanguage = Locale.getDefault().toString().replace('_', '-');
         headers.add(new BasicHeader(Header.ACCEPT_LANGUAGE.getValue(), clientAcceptLanguage));
+        return this;
+    }
+
+    public RequestBuilder setAcceptJsonHeaders() {
+        headers.add(new BasicHeader(Header.ACCEPT.getValue(), ContentType.APPLICATION_JSON.getMimeType()));
+        headers.add(new BasicHeader(Header.ACCEPT_CHARSET.getValue(), StandardCharsets.UTF_8.name()));
         return this;
     }
 

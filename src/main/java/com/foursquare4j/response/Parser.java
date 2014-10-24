@@ -10,6 +10,16 @@ public final class Parser {
         throw new IllegalAccessError("This class cannot be instantiated or extended");
     }
 
+    public static <T> Result<T> parse(String json, Class<T> responseClass) {
+        JsonObject obj = new JsonParser().parse(json).getAsJsonObject();
+        Result.Meta meta = new Gson().fromJson(obj.get("meta"), Result.Meta.class);
+        T response = new Gson().fromJson(obj.get("response"), responseClass);
+        Result<T> result = new Result<>();
+        result.setMeta(meta);
+        result.setResponse(response);
+        return result;
+    }
+
     public static <T> Result<T> parse(String json, String responseType, Class<T> responseClass) {
         JsonObject obj = new JsonParser().parse(json).getAsJsonObject();
         Result.Meta meta = new Gson().fromJson(obj.get("meta"), Result.Meta.class);
