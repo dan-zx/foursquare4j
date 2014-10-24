@@ -1,3 +1,18 @@
+/*
+ * Copyright 2014 Daniel Pedraza-Arcega
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.foursquare4j.response;
 
 import java.util.Arrays;
@@ -12,7 +27,7 @@ public class ExploreVenueGroups {
             return venue;
         }
 
-        public void setVenue(Venue venue) {
+        protected void setVenue(Venue venue) {
             this.venue = venue;
         }
 
@@ -56,7 +71,7 @@ public class ExploreVenueGroups {
         return groups;
     }
 
-    public void setGroups(Group<VenueRecommendation>[] groups) {
+    protected void setGroups(Group<VenueRecommendation>[] groups) {
         this.groups = groups;
     }
 
@@ -64,7 +79,7 @@ public class ExploreVenueGroups {
         return suggestedRadius;
     }
 
-    public void setSuggestedRadius(Integer suggestedRadius) {
+    protected void setSuggestedRadius(Integer suggestedRadius) {
         this.suggestedRadius = suggestedRadius;
     }
 
@@ -72,7 +87,7 @@ public class ExploreVenueGroups {
         return headerLocation;
     }
 
-    public void setHeaderLocation(String headerLocation) {
+    protected void setHeaderLocation(String headerLocation) {
         this.headerLocation = headerLocation;
     }
 
@@ -80,7 +95,7 @@ public class ExploreVenueGroups {
         return headerFullLocation;
     }
 
-    public void setHeaderFullLocation(String headerFullLocation) {
+    protected void setHeaderFullLocation(String headerFullLocation) {
         this.headerFullLocation = headerFullLocation;
     }
 
@@ -88,7 +103,7 @@ public class ExploreVenueGroups {
         return headerMessage;
     }
 
-    public void setHeaderMessage(String headerMessage) {
+    protected void setHeaderMessage(String headerMessage) {
         this.headerMessage = headerMessage;
     }
 

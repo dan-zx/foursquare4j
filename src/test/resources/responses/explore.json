@@ -1,0 +1,731 @@
+{
+   "meta":{
+      "code":200
+   },
+   "notifications":[
+      {
+         "type":"notificationTray",
+         "item":{
+            "unreadCount":0
+         }
+      }
+   ],
+   "response":{
+      "suggestedFilters":{
+         "header":"Pulsa para mostrar:",
+         "filters":[
+            {
+               "name":"Con promociones",
+               "key":"specials"
+            },
+            {
+               "name":"Lugares donde van mis amigos",
+               "key":"friendVisits"
+            }
+         ]
+      },
+      "headerLocation":"Puebla de Zaragoza",
+      "headerFullLocation":"Puebla de Zaragoza",
+      "headerLocationGranularity":"city",
+      "totalResults":205,
+      "suggestedBounds":{
+         "ne":{
+            "lat":19.03573100900001,
+            "lng":-98.22535164912851
+         },
+         "sw":{
+            "lat":19.017730990999993,
+            "lng":-98.24435635087148
+         }
+      },
+      "groups":[
+         {
+            "type":"Recommended Places",
+            "name":"recommended",
+            "items":[
+               {
+                  "reasons":{
+                     "count":3,
+                     "items":[
+                        {
+                           "summary":"3 amigos le gust&oacute; este sitio",
+                           "type":"social",
+                           "reasonName":"friendLikeReason",
+                           "message":"Daniel V., Liz M. and Osvaldo H. le gust&oacute; este sitio",
+                           "count":3
+                        }
+                     ]
+                  },
+                  "venue":{
+                     "id":"4b9d70a1f964a520e2ac36e3",
+                     "name":"Centro Comercial Angel&oacute;polis",
+                     "contact":{
+                        "phone":"012223030340",
+                        "formattedPhone":"01 222 303 0340"
+                     },
+                     "location":{
+                        "address":"Blvd. del Ni&ntilde;o Poblano 2510",
+                        "crossStreet":"V&iacute;a Atlixc&aacute;yotl",
+                        "lat":19.031802406413014,
+                        "lng":-98.23293249032288,
+                        "distance":599,
+                        "postalCode":"72450",
+                        "cc":"MX",
+                        "city":"Puebla de Zaragoza",
+                        "state":"Puebla",
+                        "country":"M&eacute;xico",
+                        "formattedAddress":[
+                           "Blvd. del Ni&ntilde;o Poblano 2510 (V&iacute;a Atlixc&aacute;yotl)",
+                           "72450 Puebla de Zaragoza, Puebla"
+                        ]
+                     },
+                     "categories":[
+                        {
+                           "id":"4bf58dd8d48988d1fd941735",
+                           "name":"Centro comercial",
+                           "pluralName":"Centros comerciales",
+                           "shortName":"Centro comercial",
+                           "icon":{
+                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/mall_",
+                              "suffix":".png"
+                           },
+                           "primary":true
+                        }
+                     ],
+                     "verified":false,
+                     "stats":{
+                        "checkinsCount":108574,
+                        "usersCount":23804,
+                        "tipCount":288
+                     },
+                     "url":"http:\/\/www.angelopolispuebla.com",
+                     "like":false,
+                     "rating":8.6,
+                     "ratingColor":"73CF42",
+                     "ratingSignals":2769,
+                     "hours":{
+                        "status":"Abierto hasta las 21:00",
+                        "isOpen":true
+                     },
+                     "specials":{
+                        "count":0,
+                        "items":[
+
+                        ]
+                     },
+                     "photos":{
+                        "count":1284,
+                        "groups":[
+
+                        ]
+                     },
+                     "hereNow":{
+                        "count":6,
+                        "summary":"6 personas han hecho check-in aqu&iacute;",
+                        "groups":[
+                           {
+                              "type":"others",
+                              "name":"Otras personas aqu&iacute;",
+                              "count":6,
+                              "items":[
+
+                              ]
+                           }
+                        ]
+                     }
+                  },
+                  "tips":[
+                     {
+                        "id":"50feff99e4b0d693197cb220",
+                        "createdAt":1358888857,
+                        "text":"Odio la grabaci&oacute;n \"pague su boleto en el interior de la plaza\"",
+                        "type":"user",
+                        "canonicalUrl":"https:\/\/foursquare.com\/item\/50feff99e4b0d693197cb220",
+                        "likes":{
+                           "count":63,
+                           "groups":[
+
+                           ],
+                           "summary":"63 gustan"
+                        },
+                        "logView":true,
+                        "todo":{
+                           "count":1
+                        },
+                        "user":{
+                           "id":"21099605",
+                           "firstName":"Anew",
+                           "lastName":"Gv",
+                           "gender":"female",
+                           "photo":{
+                              "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
+                              "suffix":"\/XEBMIGZM3J1YZF4S.jpg"
+                           }
+                        }
+                     }
+                  ],
+                  "referralId":"e-0-4b9d70a1f964a520e2ac36e3-0"
+               },
+               {
+                  "reasons":{
+                     "count":4,
+                     "items":[
+                        {
+                           "summary":"Liz M.&nbsp;dej&oacute; un tip aqu&iacute;",
+                           "type":"social",
+                           "reasonName":"friendTipReason",
+                           "message":"Liz M.&nbsp;dej&oacute; un tip aqu&iacute;",
+                           "count":1
+                        }
+                     ]
+                  },
+                  "snippets":{
+                     "count":1,
+                     "items":[
+                        {
+                           "detail":{
+                              "type":"tip",
+                              "object":{
+                                 "id":"51f93c43498ef9c2da751046",
+                                 "createdAt":1375288387,
+                                 "text":"Muy rico el nuevo cinnamon horchata frappuccino ;)",
+                                 "type":"user",
+                                 "canonicalUrl":"https:\/\/foursquare.com\/item\/51f93c43498ef9c2da751046",
+                                 "likes":{
+                                    "count":5,
+                                    "groups":[
+
+                                    ],
+                                    "summary":"5 gustan"
+                                 },
+                                 "logView":true,
+                                 "todo":{
+                                    "count":0
+                                 },
+                                 "user":{
+                                    "id":"55253746",
+                                    "firstName":"Liz",
+                                    "lastName":"Mozo",
+                                    "gender":"female",
+                                    "relationship":"friend",
+                                    "photo":{
+                                       "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
+                                       "suffix":"\/-KONDVJT5VXPQR4KN.jpg"
+                                    }
+                                 }
+                              }
+                           },
+                           "reason":{
+                              "text":"Liz M.&nbsp;dej&oacute; un tip aqu&iacute;",
+                              "facePile":{
+                                 "count":1,
+                                 "items":[
+                                    {
+                                       "visitedCount":15,
+                                       "liked":true,
+                                       "disliked":false,
+                                       "oked":false,
+                                       "tips":1,
+                                       "user":{
+                                          "id":"55253746",
+                                          "firstName":"Liz",
+                                          "lastName":"Mozo",
+                                          "gender":"female",
+                                          "relationship":"friend",
+                                          "photo":{
+                                             "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
+                                             "suffix":"\/-KONDVJT5VXPQR4KN.jpg"
+                                          }
+                                       }
+                                    }
+                                 ]
+                              }
+                           }
+                        }
+                     ]
+                  },
+                  "venue":{
+                     "id":"4c71c88ef4d476b0e5df5bcf",
+                     "name":"Starbucks",
+                     "contact":{
+                        "twitter":"starbucksmex"
+                     },
+                     "location":{
+                        "address":"Plaza Mazarik",
+                        "crossStreet":"Blvd. Atlixcayotl 1501",
+                        "lat":19.027068541735314,
+                        "lng":-98.23648452758789,
+                        "distance":175,
+                        "postalCode":"72810",
+                        "cc":"MX",
+                        "city":"San Andr&eacute;s Cholula",
+                        "state":"Puebla",
+                        "country":"M&eacute;xico",
+                        "formattedAddress":[
+                           "Plaza Mazarik (Blvd. Atlixcayotl 1501)",
+                           "72810 San Andr&eacute;s Cholula, Puebla"
+                        ]
+                     },
+                     "categories":[
+                        {
+                           "id":"4bf58dd8d48988d1e0931735",
+                           "name":"Cafeter&iacute;a",
+                           "pluralName":"Cafeter&iacute;as",
+                           "shortName":"Cafeter&iacute;a",
+                           "icon":{
+                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/coffeeshop_",
+                              "suffix":".png"
+                           },
+                           "primary":true
+                        }
+                     ],
+                     "verified":false,
+                     "stats":{
+                        "checkinsCount":10038,
+                        "usersCount":3564,
+                        "tipCount":113
+                     },
+                     "url":"http:\/\/www.starbucks.com.mx",
+                     "price":{
+                        "tier":1,
+                        "message":"Barato",
+                        "currency":"$"
+                     },
+                     "like":false,
+                     "rating":8.1,
+                     "ratingColor":"73CF42",
+                     "ratingSignals":481,
+                     "hours":{
+                        "status":"Probablemente abierto",
+                        "isOpen":true
+                     },
+                     "specials":{
+                        "count":0,
+                        "items":[
+
+                        ]
+                     },
+                     "photos":{
+                        "count":440,
+                        "groups":[
+
+                        ]
+                     },
+                     "hereNow":{
+                        "count":3,
+                        "summary":"3 personas han hecho check-in aqu&iacute;",
+                        "groups":[
+                           {
+                              "type":"others",
+                              "name":"Otras personas aqu&iacute;",
+                              "count":3,
+                              "items":[
+
+                              ]
+                           }
+                        ]
+                     }
+                  },
+                  "tips":[
+                     {
+                        "id":"51f93c43498ef9c2da751046",
+                        "createdAt":1375288387,
+                        "text":"Muy rico el nuevo cinnamon horchata frappuccino ;)",
+                        "type":"user",
+                        "canonicalUrl":"https:\/\/foursquare.com\/item\/51f93c43498ef9c2da751046",
+                        "likes":{
+                           "count":5,
+                           "groups":[
+
+                           ],
+                           "summary":"5 gustan"
+                        },
+                        "logView":true,
+                        "todo":{
+                           "count":0
+                        },
+                        "user":{
+                           "id":"55253746",
+                           "firstName":"Liz",
+                           "lastName":"Mozo",
+                           "gender":"female",
+                           "relationship":"friend",
+                           "photo":{
+                              "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
+                              "suffix":"\/-KONDVJT5VXPQR4KN.jpg"
+                           }
+                        }
+                     }
+                  ],
+                  "referralId":"e-0-4c71c88ef4d476b0e5df5bcf-1"
+               },
+               {
+                  "reasons":{
+                     "count":2,
+                     "items":[
+                        {
+                           "summary":"David T. (amigo de FB) le gust&oacute; este sitio",
+                           "type":"social",
+                           "reasonName":"facebookLikeReason",
+                           "message":"David T. le gust&oacute; este sitio",
+                           "count":1
+                        }
+                     ]
+                  },
+                  "venue":{
+                     "id":"4bad0850f964a52082263be3",
+                     "name":"Cin&eacute;polis",
+                     "contact":{
+                        "phone":"012222250081",
+                        "formattedPhone":"01 222 225 0081",
+                        "twitter":"cinepolis"
+                     },
+                     "location":{
+                        "address":"Centro Comercial Angel&oacute;polis",
+                        "crossStreet":"Blvd. del Ni&ntilde;o Poblano 2510",
+                        "lat":19.032099226143384,
+                        "lng":-98.23300838470459,
+                        "distance":628,
+                        "postalCode":"72450",
+                        "cc":"MX",
+                        "city":"Puebla de Zaragoza",
+                        "state":"Puebla",
+                        "country":"M&eacute;xico",
+                        "formattedAddress":[
+                           "Centro Comercial Angel&oacute;polis (Blvd. del Ni&ntilde;o Poblano 2510)",
+                           "72450 Puebla de Zaragoza, Puebla"
+                        ]
+                     },
+                     "categories":[
+                        {
+                           "id":"4bf58dd8d48988d180941735",
+                           "name":"Multicine",
+                           "pluralName":"Multicines",
+                           "shortName":"Multicine",
+                           "icon":{
+                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/movietheater_",
+                              "suffix":".png"
+                           },
+                           "primary":true
+                        }
+                     ],
+                     "verified":true,
+                     "stats":{
+                        "checkinsCount":39925,
+                        "usersCount":10829,
+                        "tipCount":160
+                     },
+                     "url":"http:\/\/www.cinepolis.com",
+                     "like":false,
+                     "rating":8.4,
+                     "ratingColor":"73CF42",
+                     "ratingSignals":1740,
+                     "reservations":{
+                        "url":"http:\/\/www.opentable.com\/single.aspx?rid=58000&amp;ref=9601"
+                     },
+                     "hours":{
+                        "isOpen":false
+                     },
+                     "specials":{
+                        "count":0,
+                        "items":[
+
+                        ]
+                     },
+                     "events":{
+                        "count":3,
+                        "summary":"3 pel&iacute;culas"
+                     },
+                     "photos":{
+                        "count":719,
+                        "groups":[
+
+                        ]
+                     },
+                     "hereNow":{
+                        "count":0,
+                        "summary":"Nadie aqu&iacute;",
+                        "groups":[
+
+                        ]
+                     }
+                  },
+                  "tips":[
+                     {
+                        "id":"52b26980498e8d2f2b170cab",
+                        "createdAt":1387424128,
+                        "text":"Si alguna vez has abordado la Ruta 10 o la 2000, la experiencia 4 DX no ser&aacute; algo nuevo para ti.",
+                        "type":"user",
+                        "canonicalUrl":"https:\/\/foursquare.com\/item\/52b26980498e8d2f2b170cab",
+                        "likes":{
+                           "count":23,
+                           "groups":[
+
+                           ],
+                           "summary":"23 gustan"
+                        },
+                        "logView":true,
+                        "todo":{
+                           "count":0
+                        },
+                        "user":{
+                           "id":"38544394",
+                           "firstName":"EHC",
+                           "gender":"male",
+                           "photo":{
+                              "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
+                              "suffix":"\/38544394-KMWMXSZQXSN01V5U.jpg"
+                           }
+                        }
+                     }
+                  ],
+                  "referralId":"e-0-4bad0850f964a52082263be3-2"
+               },
+               {
+                  "reasons":{
+                     "count":2,
+                     "items":[
+                        {
+                           "summary":"Daniel V. le gust&oacute; este sitio",
+                           "type":"social",
+                           "reasonName":"friendLikeReason",
+                           "message":"Daniel V. le gust&oacute; este sitio",
+                           "count":1
+                        }
+                     ]
+                  },
+                  "venue":{
+                     "id":"4c2b7f8257a9c9b6affff567",
+                     "name":"Liverpool",
+                     "contact":{
+                        "phone":"012222297500",
+                        "formattedPhone":"01 222 229 7500",
+                        "facebook":"140142041216",
+                        "facebookUsername":"liverpoolmexico",
+                        "facebookName":"Liverpool"
+                     },
+                     "location":{
+                        "address":"Centro Comercial Angel&oacute;polis",
+                        "crossStreet":"Blvd. del Ni&ntilde;o Poblano 2510",
+                        "lat":19.03185842862723,
+                        "lng":-98.23123939115433,
+                        "distance":685,
+                        "postalCode":"72450",
+                        "cc":"MX",
+                        "city":"Puebla de Zaragoza",
+                        "state":"Puebla",
+                        "country":"M&eacute;xico",
+                        "formattedAddress":[
+                           "Centro Comercial Angel&oacute;polis (Blvd. del Ni&ntilde;o Poblano 2510)",
+                           "72450 Puebla de Zaragoza, Puebla"
+                        ]
+                     },
+                     "categories":[
+                        {
+                           "id":"4bf58dd8d48988d1f6941735",
+                           "name":"Gran tienda",
+                           "pluralName":"Tiendas por departamentos",
+                           "shortName":"Gran tienda",
+                           "icon":{
+                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/departmentstore_",
+                              "suffix":".png"
+                           },
+                           "primary":true
+                        }
+                     ],
+                     "verified":true,
+                     "stats":{
+                        "checkinsCount":14101,
+                        "usersCount":5248,
+                        "tipCount":47
+                     },
+                     "url":"http:\/\/www.liverpool.com.mx",
+                     "like":false,
+                     "rating":8.3,
+                     "ratingColor":"73CF42",
+                     "ratingSignals":539,
+                     "hours":{
+                        "status":"Probablemente abierto",
+                        "isOpen":true
+                     },
+                     "specials":{
+                        "count":0,
+                        "items":[
+
+                        ]
+                     },
+                     "photos":{
+                        "count":328,
+                        "groups":[
+
+                        ]
+                     },
+                     "hereNow":{
+                        "count":0,
+                        "summary":"Nadie aqu&iacute;",
+                        "groups":[
+
+                        ]
+                     },
+                     "storeId":"Puebla"
+                  },
+                  "tips":[
+                     {
+                        "id":"520ce44811d20788bf814a47",
+                        "createdAt":1376576584,
+                        "text":"Es posible entrar a hacer un pago en menos de 15 minutos y as&iacute; no pagar estacionamiento.",
+                        "type":"user",
+                        "canonicalUrl":"https:\/\/foursquare.com\/item\/520ce44811d20788bf814a47",
+                        "likes":{
+                           "count":11,
+                           "groups":[
+
+                           ],
+                           "summary":"11 gustan"
+                        },
+                        "logView":true,
+                        "todo":{
+                           "count":1
+                        },
+                        "user":{
+                           "id":"31186555",
+                           "firstName":"Poblaner&iacute;as en l&iacute;nea",
+                           "gender":"none",
+                           "photo":{
+                              "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
+                              "suffix":"\/OSLJ0WEL140FJ51L.jpg"
+                           },
+                           "type":"page"
+                        }
+                     }
+                  ],
+                  "referralId":"e-0-4c2b7f8257a9c9b6affff567-3"
+               },
+               {
+                  "reasons":{
+                     "count":3,
+                     "items":[
+                        {
+                           "summary":"Daniel V. le gust&oacute; este sitio",
+                           "type":"social",
+                           "reasonName":"friendLikeReason",
+                           "message":"Daniel V. le gust&oacute; este sitio",
+                           "count":1
+                        }
+                     ]
+                  },
+                  "venue":{
+                     "id":"4be47d022457a593414daa15",
+                     "name":"Chili's",
+                     "contact":{
+                        "phone":"012222257299",
+                        "formattedPhone":"01 222 225 7299",
+                        "twitter":"chilismexico"
+                     },
+                     "location":{
+                        "address":"Centro Comercial Angel&oacute;polis",
+                        "crossStreet":"Blvd. del Ni&ntilde;o Poblano 2510",
+                        "lat":19.032072262618215,
+                        "lng":-98.23318352096007,
+                        "distance":620,
+                        "postalCode":"72450",
+                        "cc":"MX",
+                        "city":"Puebla de Zaragoza",
+                        "state":"Puebla",
+                        "country":"M&eacute;xico",
+                        "formattedAddress":[
+                           "Centro Comercial Angel&oacute;polis (Blvd. del Ni&ntilde;o Poblano 2510)",
+                           "72450 Puebla de Zaragoza, Puebla"
+                        ]
+                     },
+                     "categories":[
+                        {
+                           "id":"4bf58dd8d48988d14e941735",
+                           "name":"Restaurante americano",
+                           "pluralName":"Restaurantes americanos",
+                           "shortName":"Americana",
+                           "icon":{
+                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/default_",
+                              "suffix":".png"
+                           },
+                           "primary":true
+                        }
+                     ],
+                     "verified":true,
+                     "stats":{
+                        "checkinsCount":8206,
+                        "usersCount":4594,
+                        "tipCount":75
+                     },
+                     "url":"http:\/\/www.chilis.com.mx",
+                     "price":{
+                        "tier":2,
+                        "message":"Moderado",
+                        "currency":"$"
+                     },
+                     "like":false,
+                     "rating":8.2,
+                     "ratingColor":"73CF42",
+                     "ratingSignals":513,
+                     "hours":{
+                        "status":"Cerrado hasta la(s) 13:00",
+                        "isOpen":false
+                     },
+                     "specials":{
+                        "count":0,
+                        "items":[
+
+                        ]
+                     },
+                     "photos":{
+                        "count":355,
+                        "groups":[
+
+                        ]
+                     },
+                     "hereNow":{
+                        "count":0,
+                        "summary":"Nadie aqu&iacute;",
+                        "groups":[
+
+                        ]
+                     },
+                     "storeId":""
+                  },
+                  "tips":[
+                     {
+                        "id":"4d902992835b530c1279aeb6",
+                        "createdAt":1301293458,
+                        "text":"El servicio mejor&oacute; much&iacute;simo en realidad te tratan como REY y bueno la comida como siempre llenadora y excelente.",
+                        "type":"user",
+                        "canonicalUrl":"https:\/\/foursquare.com\/item\/4d902992835b530c1279aeb6",
+                        "likes":{
+                           "count":16,
+                           "groups":[
+
+                           ],
+                           "summary":"16 gustan"
+                        },
+                        "logView":true,
+                        "todo":{
+                           "count":0
+                        },
+                        "user":{
+                           "id":"8138221",
+                           "firstName":"Gsus",
+                           "lastName":"Hern&aacute;ndez",
+                           "gender":"male",
+                           "photo":{
+                              "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
+                              "suffix":"\/5RIIPRSMHMOCJPJ4.jpg"
+                           }
+                        }
+                     }
+                  ],
+                  "referralId":"e-0-4be47d022457a593414daa15-4"
+               }
+            ]
+         }
+      ]
+   }
+}
