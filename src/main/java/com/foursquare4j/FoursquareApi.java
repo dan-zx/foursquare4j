@@ -316,8 +316,8 @@ public class FoursquareApi {
      * @param sortByDistance Boolean flag to sort the results by distance instead of relevance.
      * @param price Comma separated list of price points. Currently the valid range of price points
      *        are [1,2,3,4], 1 being the least expensive, 4 being the most expensive. For food
-     *        venues, in the United States, 1 is < $10 an entree, 2 is $10-$20 an entree, 3 is
-     *        $20-$30 an entree, 4 is > $30 an entree.
+     *        venues, in the United States, 1 is  {@literal <} $10 an entree, 2 is $10-$20 an 
+     *        entree, 3 is $20-$30 an entree, 4 is {@literal >} $30 an entree.
      * @param saved Boolean flag to only include venues that the user has saved on their To-Do list
      *        or to another list.
      * @param specials Boolean flag to only include venues that have a special.
