@@ -25,7 +25,7 @@ public class RequestBuilderTest {
     public void testCallRequest() throws Exception {
         Integer statusCode = new RequestBuilder("http://www.google.com/")
             .setMethod(Method.GET)
-            .setDefaultHeaders()
+            .addAcceptLanguageDefaultHeader()
             .call();
         
         assertThat(statusCode).isNotNull().isEqualTo(200);
@@ -35,7 +35,7 @@ public class RequestBuilderTest {
     public void testCallForResultRequest() throws Exception {
         String result = new RequestBuilder("http://www.google.com/")
             .setMethod(Method.GET)
-            .setDefaultHeaders()
+            .addAcceptLanguageDefaultHeader()
             .callForResult();
         
         assertThat(result).isNotNull().isNotEmpty();

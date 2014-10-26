@@ -42,9 +42,15 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * HTTP request helper class.
+ * 
+ * @author Daniel Pedraza-Arcega.
+ */
 public class RequestBuilder {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RequestBuilder.class);
@@ -56,6 +62,12 @@ public class RequestBuilder {
     private final List<BasicHeader> headers;
     private HttpRequestBase request;
 
+    /**
+     * Builds a new RequestBuilder.
+     * 
+     * @param url the url to use form connection.
+     * @param timeout the timeout.
+     */
     public RequestBuilder(String url, int timeout) {
         RequestConfig requestConfig = RequestConfig.custom()
                 .setConnectTimeout(timeout)
@@ -70,10 +82,21 @@ public class RequestBuilder {
         this.url = url;
     }
 
+    /**
+     * Builds a new RequestBuilder with a default timeout of {@link #DEFAULT_TIMEOUT}.
+     * 
+     * @param url the url to use form connection.
+     */
     public RequestBuilder(String url) {
         this(url, DEFAULT_TIMEOUT);
     }
 
+    /**
+     * Sets the connection method.
+     * 
+     * @param method a method.
+     * @return this object.
+     */
     public RequestBuilder setMethod(Method method) {
         switch (method) {
             case GET:
@@ -94,49 +117,88 @@ public class RequestBuilder {
         return this;
     }
 
-    public RequestBuilder addFormParam(String name, Object value) {
-        if ((name != null && !name.trim().isEmpty()) && value != null) {
-            formParams.add(new BasicNameValuePair(name, value.toString()));
-        }
-
+    /**
+     * Adds a form parameter.
+     * 
+     * @param name the name of the parameter.
+     * @param value the value of the parameter
+     * @return this object.
+     */
+    public RequestBuilder addFormParam(String name, String value) {
+        if (name != null && value != null) formParams.add(new BasicNameValuePair(name, value));
         return this;
     }
 
+    /**
+     * Adds a header.
+     * 
+     * @param header a header.
+     * @param value a value.
+     * @return this object.
+     */
     public RequestBuilder addHeader(Header header, String value) {
-        headers.add(new BasicHeader(header.getValue(), value));
+        if (value != null) headers.add(new BasicHeader(header.getValue(), value));
         return this;
     }
 
-    public RequestBuilder setDefaultHeaders() {
+    /**
+     * Adds the Accept-Language header with the current locale.
+     *  
+     * @return this object.
+     */
+    public RequestBuilder addAcceptLanguageDefaultHeader() {
         String clientAcceptLanguage = Locale.getDefault().toString().replace('_', '-');
         headers.add(new BasicHeader(Header.ACCEPT_LANGUAGE.getValue(), clientAcceptLanguage));
         return this;
     }
 
-    public RequestBuilder setAcceptJsonHeaders() {
+    /**
+     * Adds the following header:
+     * <table summary="">
+     *  <tr>
+     *    <td>Accept</td>
+     *    <td>application/json</td>
+     *  </tr>
+     *  <tr>
+     *    <td>Accept-Charset</td>
+     *    <td>UTF-8</td>
+     *  </tr>
+     * </table>
+     * 
+     * @return this object.
+     */
+    public RequestBuilder addAcceptJsonHeaders() {
         headers.add(new BasicHeader(Header.ACCEPT.getValue(), ContentType.APPLICATION_JSON.getMimeType()));
         headers.add(new BasicHeader(Header.ACCEPT_CHARSET.getValue(), StandardCharsets.UTF_8.name()));
         return this;
     }
 
-    protected void setUpHeaders() {
+    /** Appends headers, if any, to the request. */
+    private void setupHeaders() {
         if (!headers.isEmpty()) {
             LOGGER.debug("Headers: {}", headers);
             request.setHeaders(headers.toArray(new org.apache.http.Header[headers.size()]));
         }
     }
 
-    protected void setUpFormParams() throws UnsupportedEncodingException {
+    /** Appends form params, if any, to the request. */
+    private void setupFormParams() throws UnsupportedEncodingException {
         if (!formParams.isEmpty() && request instanceof HttpEntityEnclosingRequest) {
             LOGGER.debug("Form params: {}", formParams);
             ((HttpEntityEnclosingRequest) request).setEntity(new UrlEncodedFormEntity(formParams));
         }
     }
 
+    /**
+     * Sends the HTTP request to the given url in the constructor using the headers, parameters and
+     * method specified the builder methods.
+     * 
+     * @return the request code or {@code null} if any error occurred.
+     */
     public Integer call() {
         try {
-            setUpHeaders();
-            setUpFormParams();
+            setupHeaders();
+            setupFormParams();
             LOGGER.debug("URL: {}", request.getURI());
             LOGGER.debug("Method: {}", request.getMethod());
             HttpResponse response = httpClient.execute(request);
@@ -157,12 +219,18 @@ public class RequestBuilder {
 
         return null;
     }
-    
+
+    /**
+     * Sends the HTTP request to the given url in the constructor using the headers, parameters and
+     * method specified the builder methods.
+     * 
+     * @return the response text or {@code null} if any error occurred.
+     */
     public String callForResult() {
         String responseText = null;
         try {
-            setUpHeaders();
-            setUpFormParams();
+            setupHeaders();
+            setupFormParams();
             LOGGER.debug("URL: {}", request.getURI());
             LOGGER.debug("Method: {}", request.getMethod());
             HttpResponse response = httpClient.execute(request);

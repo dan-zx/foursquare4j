@@ -13,19 +13,5 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.foursquare4j.http;
-
-/**
- * Set of common methods for HTTP.
- * 
- * @author Daniel Pedraza-Arcega.
- */
-public enum Method {
-
-    OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, PATCH;
-
-    /** @return the string value of the constant. */
-    public String getValue() {
-        return name().toLowerCase();
-    }
-}
+/** Foursquare API. */
+package com.foursquare4j;

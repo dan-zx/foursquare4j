@@ -15,6 +15,11 @@
  */
 package com.foursquare4j.http;
 
+/**
+ * Set of common headers for HTTP.
+ * 
+ * @author Daniel Pedraza-Arcega.
+ */
 public enum Header {
 
     ACCEPT, ACCEPT_CHARSET, ACCEPT_ENCODING, ACCEPT_LANGUAGE, ACCEPT_DATETIME, AUTHORIZATION, 
@@ -23,10 +28,17 @@ public enum Header {
     MAX_FORWARDS, ORIGIN, PRAGMA, PROXY_AUTHORIZATION, RANGE, REFERER, TE, UPGRADE, USER_AGENT, VIA, 
     WARNING;
 
+    /** @return the string value of the constant. */
     public String getValue() {
         return screamingCapsToCapitalizedWords(name());
     }
 
+    /**
+     * Converts a string in screaming caps to words.
+     * 
+     * @param s a screaming caps string.
+     * @return words of the given string. 
+     */
     private String screamingCapsToCapitalizedWords(String s) {
         String[] words = s.toLowerCase().split("_");
         StringBuilder finalString = new StringBuilder(s.length() + 1);
