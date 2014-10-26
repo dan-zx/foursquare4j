@@ -12,23 +12,30 @@
    ],
    "response":{
       "user":{
-         "id":"55253746",
-         "firstName":"Liz",
-         "lastName":"Mozo",
-         "gender":"female",
-         "relationship":"friend",
+         "id":"88260846",
+         "firstName":"Daniel",
+         "lastName":"Pedraza",
+         "gender":"male",
+         "relationship":"self",
          "photo":{
-            "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
-            "suffix":"\/-KONDVJT5VXPQR4KN.jpg"
+            "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
+            "suffix":"\/88260846-Q1M41BHXTDOTJJA3.jpg"
          },
          "friends":{
-            "count":85,
-            "summary":"Amigos con Miguel Nieva",
+            "count":11,
             "groups":[
                {
                   "type":"friends",
                   "name":"Amigos en com&uacute;n",
-                  "count":1,
+                  "count":0,
+                  "items":[
+
+                  ]
+               },
+               {
+                  "type":"others",
+                  "name":"Otros amigos",
+                  "count":11,
                   "items":[
                      {
                         "id":"67202829",
@@ -41,7 +48,7 @@
                            "suffix":"\/GTKX2YCJIV1BWSVA.jpg"
                         },
                         "tips":{
-                           "count":5
+                           "count":6
                         },
                         "lists":{
                            "groups":[
@@ -61,23 +68,77 @@
                            "twitter":"mikenieva",
                            "facebook":"782730356"
                         }
-                     }
-                  ]
-               },
-               {
-                  "type":"others",
-                  "name":"Otros amigos",
-                  "count":84,
-                  "items":[
+                     },
                      {
-                        "id":"88260846",
-                        "firstName":"Daniel",
-                        "lastName":"Pedraza",
+                        "id":"9312879",
+                        "firstName":"Jorge",
+                        "lastName":"Lira",
                         "gender":"male",
-                        "relationship":"self",
+                        "relationship":"friend",
                         "photo":{
                            "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
-                           "suffix":"\/88260846-Q1M41BHXTDOTJJA3.jpg"
+                           "suffix":"\/9312879-SIC4OQDOC5BPWEK5.jpg"
+                        },
+                        "tips":{
+                           "count":0
+                        },
+                        "lists":{
+                           "groups":[
+                              {
+                                 "type":"created",
+                                 "count":1,
+                                 "items":[
+
+                                 ]
+                              }
+                           ]
+                        },
+                        "homeCity":"San Andr&eacute;s Cholula, Mexico",
+                        "bio":"",
+                        "contact":{
+                           "email":"coque_16@hotmail.com",
+                           "twitter":"coquemosh",
+                           "facebook":"503571813"
+                        }
+                     },
+                     {
+                        "id":"214632",
+                        "firstName":"Alejandro",
+                        "lastName":"Islas",
+                        "gender":"male",
+                        "relationship":"friend",
+                        "photo":{
+                           "prefix":"https:\/\/irs0.4sqi.net\/img\/user\/",
+                           "suffix":"\/214632-LEY5ZXLX2XNCHCRM.jpg"
+                        },
+                        "tips":{
+                           "count":25
+                        },
+                        "lists":{
+                           "groups":[
+                              {
+                                 "type":"created",
+                                 "count":1,
+                                 "items":[
+
+                                 ]
+                              }
+                           ]
+                        },
+                        "homeCity":"Guadalajara, Jalisco",
+                        "bio":"",
+                        "contact":{
+
+                        }
+                     },
+                     {
+                        "id":"7977031",
+                        "firstName":"Mariana",
+                        "gender":"female",
+                        "relationship":"friend",
+                        "photo":{
+                           "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
+                           "suffix":"\/YX04Q5LECGXCCAJT.jpg"
                         },
                         "tips":{
                            "count":1
@@ -93,160 +154,197 @@
                               }
                            ]
                         },
-                        "homeCity":"",
+                        "homeCity":"Puebla, Mexico",
                         "bio":"",
                         "contact":{
-                           "email":"danyboy_shaggy@hotmail.com",
-                           "twitter":"dan_zx",
-                           "facebook":"783235483"
+                           "email":"chopsuey1937@hotmail.com",
+                           "facebook":"624000192"
                         }
                      },
                      {
-                        "id":"45018406",
-                        "firstName":"Santiago",
-                        "lastName":"Carvajal",
+                        "id":"3602863",
+                        "firstName":"Daniel",
+                        "lastName":"V.",
                         "gender":"male",
+                        "relationship":"friend",
                         "photo":{
-                           "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
-                           "suffix":"\/45018406-H2SIXVS53WFFP1F3.jpg"
+                           "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
+                           "suffix":"\/BSIISHWYBCVN0OBT.png"
+                        },
+                        "tips":{
+                           "count":11
+                        },
+                        "lists":{
+                           "groups":[
+                              {
+                                 "type":"created",
+                                 "count":1,
+                                 "items":[
+
+                                 ]
+                              }
+                           ]
+                        },
+                        "homeCity":"M&eacute;xico DF",
+                        "bio":"",
+                        "contact":{
+                           "email":"d_surfer8@hotmail.com"
+                        }
+                     },
+                     {
+                        "id":"55253746",
+                        "firstName":"Liz",
+                        "lastName":"Mozo",
+                        "gender":"female",
+                        "relationship":"friend",
+                        "photo":{
+                           "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
+                           "suffix":"\/-KONDVJT5VXPQR4KN.jpg"
                         },
                         "tips":{
                            "count":3
                         },
-                        "homeCity":"Puebla",
-                        "bio":"",
-                        "contact":{
+                        "lists":{
+                           "groups":[
+                              {
+                                 "type":"created",
+                                 "count":1,
+                                 "items":[
 
+                                 ]
+                              }
+                           ]
+                        },
+                        "homeCity":"Puebla, M&eacute;xico",
+                        "bio":"Directora Editorial Revista HAUS",
+                        "contact":{
+                           "twitter":"lizmozo",
+                           "facebook":"1325810448"
                         }
                      },
                      {
-                        "id":"89804136",
-                        "firstName":"Oscar",
-                        "lastName":"Banda",
+                        "id":"46160412",
+                        "firstName":"Eduardo",
+                        "lastName":"Santos",
                         "gender":"male",
+                        "relationship":"friend",
                         "photo":{
-                           "prefix":"https:\/\/irs0.4sqi.net\/img\/user\/",
-                           "suffix":"\/89804136-D5T5243ACW3WONTD.jpg"
+                           "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
+                           "suffix":"\/46160412-0J0A2FSSACIP2DCX.jpg"
                         },
                         "tips":{
-                           "count":0
+                           "count":2
                         },
-                        "homeCity":"Puebla, PU",
+                        "lists":{
+                           "groups":[
+                              {
+                                 "type":"created",
+                                 "count":1,
+                                 "items":[
+
+                                 ]
+                              }
+                           ]
+                        },
+                        "homeCity":"Veracruz",
                         "bio":"",
                         "contact":{
-                           "facebook":"565870454"
+                           "email":"gold_silver8@hotmail.com",
+                           "twitter":"j_ed",
+                           "facebook":"567016272"
                         }
                      },
                      {
-                        "id":"88102022",
-                        "firstName":"Linda",
-                        "lastName":"Labra",
+                        "id":"52060311",
+                        "firstName":"Ive",
+                        "lastName":"Nieto",
                         "gender":"female",
+                        "relationship":"friend",
                         "photo":{
-                           "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
-                           "suffix":"\/88102022-LKNBFP0KZGZS0BBE.jpg"
+                           "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
+                           "suffix":"\/VNS4JPEG344SWPLV.jpg"
                         },
                         "tips":{
-                           "count":16
+                           "count":2
                         },
-                        "homeCity":"San Andr&eacute;s Cholula, Puebla, M&eacute;xico ",
+                        "lists":{
+                           "groups":[
+                              {
+                                 "type":"created",
+                                 "count":1,
+                                 "items":[
+
+                                 ]
+                              }
+                           ]
+                        },
+                        "homeCity":"",
                         "bio":"",
                         "contact":{
-                           "twitter":"liindarivera",
-                           "facebook":"797634762"
+                           "email":"ive.doiha@gmail.com",
+                           "twitter":"ive_katoen",
+                           "facebook":"729227330"
                         }
                      },
                      {
-                        "id":"6636547",
-                        "firstName":"Ricardo Jacob",
-                        "lastName":"Hern&aacute;ndez Hern&aacute;ndez",
+                        "id":"67933825",
+                        "firstName":"Osvaldo",
+                        "lastName":"Huerta",
                         "gender":"male",
+                        "relationship":"friend",
                         "photo":{
                            "prefix":"https:\/\/irs0.4sqi.net\/img\/user\/",
-                           "suffix":"\/6636547-CK1MMFXK4VTVCYEP.jpg"
+                           "suffix":"\/IMM2RGNGK11DTWN0.jpg"
                         },
                         "tips":{
-                           "count":5
+                           "count":15
                         },
-                        "homeCity":"Heroica Puebla de Zaragoza, Mexico",
+                        "lists":{
+                           "groups":[
+                              {
+                                 "type":"created",
+                                 "count":1,
+                                 "items":[
+
+                                 ]
+                              }
+                           ]
+                        },
+                        "homeCity":"Guadalajara, JAL",
                         "bio":"",
                         "contact":{
-                           "twitter":"jakefrommexico",
-                           "facebook":"877570295"
+                           "twitter":"osvaldohg"
                         }
                      },
                      {
-                        "id":"87213287",
-                        "firstName":"Antonia",
-                        "lastName":"Lira",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
-                           "suffix":"\/87213287-KVIQ0OUYT0ZSFOJC.jpg"
-                        },
-                        "tips":{
-                           "count":0
-                        },
-                        "homeCity":"Cholula, PU",
-                        "bio":"",
-                        "contact":{
-                           "facebook":"528211232"
-                        }
-                     },
-                     {
-                        "id":"86236281",
-                        "firstName":"Luis",
-                        "lastName":"Perez Rivera",
-                        "gender":"male",
-                        "photo":{
-                           "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
-                           "suffix":"\/86236281-QKK1KSL0OOXAECIM.jpg"
-                        },
-                        "tips":{
-                           "count":0
-                        },
-                        "homeCity":"Puebla, PU",
-                        "bio":"",
-                        "contact":{
-                           "facebook":"1400169899"
-                        }
-                     },
-                     {
-                        "id":"24910703",
-                        "firstName":"Mar",
-                        "lastName":"Rua",
+                        "id":"88037635",
+                        "firstName":"Linjul",
+                        "lastName":"Casta&ntilde;eda",
                         "gender":"female",
+                        "relationship":"friend",
                         "photo":{
-                           "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
-                           "suffix":"\/24910703-ITBVJUOOAPSHWYXE.jpg"
+                           "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
+                           "suffix":"\/88037635-JDPSUNHVRY4JQ5DZ.jpg"
                         },
                         "tips":{
-                           "count":0
+                           "count":1
                         },
-                        "homeCity":"Puebla",
+                        "lists":{
+                           "groups":[
+                              {
+                                 "type":"created",
+                                 "count":1,
+                                 "items":[
+
+                                 ]
+                              }
+                           ]
+                        },
+                        "homeCity":"San Andr&eacute;s Cholula, Puebla, Mexico",
                         "bio":"",
                         "contact":{
-                           "twitter":"mar_rua",
-                           "facebook":"618400856"
-                        }
-                     },
-                     {
-                        "id":"11554196",
-                        "firstName":"Aimar",
-                        "lastName":"Herrera",
-                        "gender":"male",
-                        "photo":{
-                           "prefix":"https:\/\/irs0.4sqi.net\/img\/user\/",
-                           "suffix":"\/J0E3N314E4MDUX0T.jpg"
-                        },
-                        "tips":{
-                           "count":44
-                        },
-                        "homeCity":"Puebla, Mexico",
-                        "bio":"",
-                        "contact":{
-                           "twitter":"aimar_israel",
-                           "facebook":"879780612"
+                           "email":"face.linjul@hotmail.com",
+                           "facebook":"838890549"
                         }
                      }
                   ]
@@ -254,115 +352,22 @@
             ]
          },
          "tips":{
-            "count":3
+            "count":1
          },
-         "homeCity":"Puebla, M&eacute;xico",
-         "bio":"Directora Editorial Revista HAUS",
+         "homeCity":"",
+         "bio":"",
          "contact":{
-            "twitter":"lizmozo",
-            "facebook":"1325810448"
+            "email":"danyboy_shaggy@hotmail.com",
+            "twitter":"dan_zx",
+            "facebook":"783235483"
          },
-         "checkinPings":"nearby",
-         "pings":true,
+         "checkinPings":"off",
+         "pings":false,
          "type":"user",
          "badges":{
-            "count":12,
+            "count":0,
             "items":[
-               {
-                  "id":"5372543f498e78d1aa6c7abd",
-                  "badgeId":"4d24bfee668f60fc7b32b26f",
-                  "name":"Fresh Brew",
-                  "unlockMessage":"Liz desbloque&oacute; el badge Fresh Brew",
-                  "description":"Look at you, Juan Valdez! That's a lot of coffee. Now that you've had your caffeine fix, get out there and conquer the day - one twitchy step at a time.\n\nBean there, done that! That's 15 different coffee shops for you! You'll need to check in to 5 new coffee spots to get to Level 5.",
-                  "level":4,
-                  "badgeText":"Look at you, Juan Valdez! That's a lot of coffee. Now that you've had your caffeine fix, get out there and conquer the day - one twitchy step at a time.",
-                  "levelText":"Bean there, done that! That's 15 different coffee shops for you! You'll need to check in to 5 new coffee spots to get to Level 5.",
-                  "categorySummary":"Coffee Shops",
-                  "image":{
-                     "prefix":"https:\/\/playfoursquare.s3.amazonaws.com\/badge\/",
-                     "sizes":[
-                        57,
-                        114,
-                        200,
-                        300,
-                        400
-                     ],
-                     "name":"\/coffee_4.png"
-                  },
-                  "unlocks":[
-                     {
-                        "checkins":[
-                           {
-                              "id":"5372543f498e78d1aa6c7ab3",
-                              "createdAt":1400001599,
-                              "type":"checkin",
-                              "shout":"Coffee break!",
-                              "timeZoneOffset":-300,
-                              "venue":{
-                                 "id":"4c2ec541ac0ab713fa9b1b1e",
-                                 "name":"Starbucks",
-                                 "contact":{
-                                    "phone":"012222315786",
-                                    "formattedPhone":"01 222 231 5786",
-                                    "twitter":"starbucksmex"
-                                 },
-                                 "location":{
-                                    "address":"Av. Ju&aacute;rez 2511",
-                                    "crossStreet":"27 Sur",
-                                    "lat":19.051916205742696,
-                                    "lng":-98.21938276290894,
-                                    "postalCode":"72160",
-                                    "cc":"MX",
-                                    "city":"Puebla de Zaragoza",
-                                    "state":"Puebla",
-                                    "country":"M&eacute;xico",
-                                    "formattedAddress":[
-                                       "Av. Ju&aacute;rez 2511 (27 Sur)",
-                                       "72160 Puebla de Zaragoza, Puebla"
-                                    ]
-                                 },
-                                 "categories":[
-                                    {
-                                       "id":"4bf58dd8d48988d1e0931735",
-                                       "name":"Cafeter&iacute;a",
-                                       "pluralName":"Cafeter&iacute;as",
-                                       "shortName":"Cafeter&iacute;a",
-                                       "icon":{
-                                          "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/coffeeshop_",
-                                          "suffix":".png"
-                                       },
-                                       "primary":true
-                                    }
-                                 ],
-                                 "verified":false,
-                                 "stats":{
-                                    "checkinsCount":17594,
-                                    "usersCount":5079,
-                                    "tipCount":158
-                                 }
-                              },
-                              "photos":{
-                                 "count":0,
-                                 "items":[
 
-                                 ]
-                              },
-                              "posts":{
-                                 "count":0,
-                                 "textCount":0
-                              },
-                              "comments":{
-                                 "count":0
-                              },
-                              "source":{
-                                 "name":"foursquare for iPhone",
-                                 "url":"https:\/\/foursquare.com\/download\/#\/iphone"
-                              }
-                           }
-                        ]
-                     }
-                  ]
-               }
             ]
          },
          "mayorships":{
@@ -372,44 +377,41 @@
             ]
          },
          "checkins":{
-            "count":291,
+            "count":6,
             "items":[
                {
-                  "id":"542f78bf498eb0b517333b24",
-                  "createdAt":1412397247,
+                  "id":"544445de498e41faeec4633b",
+                  "createdAt":1413760478,
                   "type":"checkin",
-                  "shout":"Ricky Martin 😍",
                   "timeZoneOffset":-300,
                   "venue":{
-                     "id":"4bca6385cc8cd13af0b2bdcf",
-                     "name":"Palacio de los Deportes",
+                     "id":"5009a258e4b0715bfbeef6ae",
+                     "name":"San Marco",
                      "contact":{
-                        "phone":"015552379999",
-                        "formattedPhone":"01 55 5237 9999"
+                        "phone":"012444455884",
+                        "formattedPhone":"01 244 445 5884"
                      },
                      "location":{
-                        "address":"R&iacute;o Churubusco S\/N",
-                        "crossStreet":"Esq. con Eje 3 Sur A&ntilde;il",
-                        "lat":19.405351360121628,
-                        "lng":-99.09981787204742,
-                        "postalCode":"08400",
+                        "address":"Libramiento Atlixco s\/n",
+                        "lat":18.893722704643032,
+                        "lng":-98.42674629875235,
                         "cc":"MX",
-                        "city":"Iztacalco",
-                        "state":"Federal District",
+                        "city":"Atlixco",
+                        "state":"Puebla",
                         "country":"M&eacute;xico",
                         "formattedAddress":[
-                           "R&iacute;o Churubusco S\/N (Esq. con Eje 3 Sur A&ntilde;il)",
-                           "08400 Iztacalco, Federal District"
+                           "Libramiento Atlixco s\/n",
+                           "Atlixco, Puebla"
                         ]
                      },
                      "categories":[
                         {
-                           "id":"4f4528bc4b90abdf24c9de85",
-                           "name":"Atletismo y Deportes",
-                           "pluralName":"Atletismo y Deportes",
-                           "shortName":"Atletismo y Deportes",
+                           "id":"4bf58dd8d48988d110941735",
+                           "name":"Restaurante italiano",
+                           "pluralName":"Restaurantes italianos",
+                           "shortName":"Italiana",
                            "icon":{
-                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/sports_outdoors_",
+                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/italian_",
                               "suffix":".png"
                            },
                            "primary":true
@@ -417,50 +419,17 @@
                      ],
                      "verified":false,
                      "stats":{
-                        "checkinsCount":62491,
-                        "usersCount":35592,
-                        "tipCount":314
+                        "checkinsCount":312,
+                        "usersCount":253,
+                        "tipCount":10
                      },
                      "like":false
                   },
-                  "event":{
-                     "id":"53b31c70e4b0d37c5c1f9c77",
-                     "name":"Ricky Martin",
-                     "categories":[
-                        {
-                           "id":"4e0a4b91bd41eda0d6092f89",
-                           "name":"Concierto",
-                           "pluralName":"Conciertos",
-                           "shortName":"Concierto",
-                           "icon":{
-                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/musicvenue_",
-                              "suffix":".png"
-                           },
-                           "primary":true
-                        }
-                     ]
-                  },
                   "likes":{
-                     "count":1,
+                     "count":0,
                      "groups":[
-                        {
-                           "type":"others",
-                           "count":1,
-                           "items":[
-                              {
-                                 "id":"67716116",
-                                 "firstName":"Carli",
-                                 "lastName":"Suntheshine",
-                                 "gender":"male",
-                                 "photo":{
-                                    "prefix":"https:\/\/irs0.4sqi.net\/img\/user\/",
-                                    "suffix":"\/67716116-FWX3RB5F2GPJEIEX.jpg"
-                                 }
-                              }
-                           ]
-                        }
-                     ],
-                     "summary":"Carli Suntheshine"
+
+                     ]
                   },
                   "like":false,
                   "photos":{
@@ -477,14 +446,14 @@
                      "count":0
                   },
                   "source":{
-                     "name":"Swarm for iOS",
+                     "name":"Swarm for Android",
                      "url":"https:\/\/www.swarmapp.com"
                   }
                }
             ]
          },
          "following":{
-            "count":14,
+            "count":0,
             "groups":[
                {
                   "type":"following",
@@ -497,298 +466,15 @@
                {
                   "type":"others",
                   "name":"Otro seguimiento",
-                  "count":14,
+                  "count":0,
                   "items":[
-                     {
-                        "id":"24420675",
-                        "firstName":"Autobuses ADO",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
-                           "suffix":"\/24420675-XO4G3UF1M1DACPH5.png"
-                        },
-                        "type":"chain",
-                        "followers":{
-                           "count":2117,
-                           "groups":[
 
-                           ]
-                        },
-                        "tips":{
-                           "count":14
-                        },
-                        "homeCity":"Mexico",
-                        "bio":"",
-                        "contact":{
-                           "twitter":"tuado",
-                           "facebook":"37302505546"
-                        }
-                     },
-                     {
-                        "id":"4084201",
-                        "firstName":"Pittsburgh Steelers",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
-                           "suffix":"\/TLMHSIOTTMWDUNMS.jpg"
-                        },
-                        "type":"page",
-                        "followers":{
-                           "count":13049,
-                           "groups":[
-
-                           ]
-                        },
-                        "tips":{
-                           "count":0
-                        },
-                        "homeCity":"Pittsburgh, PA",
-                        "bio":"",
-                        "contact":{
-
-                        }
-                     },
-                     {
-                        "id":"29569579",
-                        "firstName":"MX-DF",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
-                           "suffix":"\/W0CM1BDO2IXPAKRD.jpg"
-                        },
-                        "type":"page",
-                        "followers":{
-                           "count":17635,
-                           "groups":[
-
-                           ]
-                        },
-                        "tips":{
-                           "count":1002
-                        },
-                        "lists":{
-                           "groups":[
-                              {
-                                 "type":"created",
-                                 "count":9,
-                                 "items":[
-
-                                 ]
-                              }
-                           ]
-                        },
-                        "homeCity":"M&eacute;xico - D.F.",
-                        "bio":"",
-                        "contact":{
-                           "facebook":"103343143040374"
-                        }
-                     },
-                     {
-                        "id":"24878408",
-                        "firstName":"Selecci&oacute;n Mexicana",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
-                           "suffix":"\/24878408-VS0ZNP4XPZEQXJOF.png"
-                        },
-                        "type":"page",
-                        "followers":{
-                           "count":11324,
-                           "groups":[
-
-                           ]
-                        },
-                        "tips":{
-                           "count":101
-                        },
-                        "lists":{
-                           "groups":[
-                              {
-                                 "type":"created",
-                                 "count":2,
-                                 "items":[
-
-                                 ]
-                              }
-                           ]
-                        },
-                        "homeCity":"Mexico",
-                        "bio":"",
-                        "contact":{
-                           "twitter":"miseleccionmx",
-                           "facebook":"379915922194"
-                        }
-                     },
-                     {
-                        "id":"17514973",
-                        "firstName":"Cinemex",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
-                           "suffix":"\/VWJM5LDLV2LSZVB4.jpg"
-                        },
-                        "type":"chain",
-                        "followers":{
-                           "count":20089,
-                           "groups":[
-
-                           ]
-                        },
-                        "tips":{
-                           "count":4
-                        },
-                        "homeCity":"M&eacute;xico",
-                        "bio":"",
-                        "contact":{
-                           "twitter":"cinemex",
-                           "facebook":"83988183288"
-                        }
-                     },
-                     {
-                        "id":"10688762",
-                        "firstName":"M&eacute;xico es Cultura",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
-                           "suffix":"\/10688762-IQTBA43Q1VRF0JGK.jpg"
-                        },
-                        "type":"page",
-                        "followers":{
-                           "count":36293,
-                           "groups":[
-
-                           ]
-                        },
-                        "tips":{
-                           "count":281
-                        },
-                        "homeCity":"Distrito Federal",
-                        "bio":"",
-                        "contact":{
-
-                        }
-                     },
-                     {
-                        "id":"2944196",
-                        "firstName":"MoMA",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
-                           "suffix":"\/VRBRRK4QP3YBF0GR.jpg"
-                        },
-                        "type":"chain",
-                        "followers":{
-                           "count":169519,
-                           "groups":[
-
-                           ]
-                        },
-                        "tips":{
-                           "count":30
-                        },
-                        "lists":{
-                           "groups":[
-                              {
-                                 "type":"created",
-                                 "count":1,
-                                 "items":[
-
-                                 ]
-                              }
-                           ]
-                        },
-                        "homeCity":"New York, NY",
-                        "bio":"",
-                        "contact":{
-                           "twitter":"museummodernart"
-                        }
-                     },
-                     {
-                        "id":"28182645",
-                        "firstName":"La Chilanguita",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
-                           "suffix":"\/1MS514BKQFT1MN1W.jpg"
-                        },
-                        "type":"chain",
-                        "followers":{
-                           "count":14033,
-                           "groups":[
-
-                           ]
-                        },
-                        "tips":{
-                           "count":22
-                        },
-                        "homeCity":"Mexico DF",
-                        "bio":"",
-                        "contact":{
-                           "twitter":"laschilanguitas"
-                        }
-                     },
-                     {
-                        "id":"13728563",
-                        "firstName":"el tri&aacute;ngulo",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
-                           "suffix":"\/RLYZG2SR4GYYVM1F.jpg"
-                        },
-                        "type":"page",
-                        "followers":{
-                           "count":954,
-                           "groups":[
-
-                           ]
-                        },
-                        "tips":{
-                           "count":0
-                        },
-                        "homeCity":"Puebla, Mexico",
-                        "bio":"",
-                        "contact":{
-                           "twitter":"eltriangulo"
-                        }
-                     },
-                     {
-                        "id":"19548084",
-                        "firstName":"CHILIS MEXICO",
-                        "gender":"none",
-                        "photo":{
-                           "prefix":"https:\/\/irs2.4sqi.net\/img\/user\/",
-                           "suffix":"\/OH4ZN1KPW2SFWKOU.jpg"
-                        },
-                        "type":"chain",
-                        "followers":{
-                           "count":28997,
-                           "groups":[
-
-                           ]
-                        },
-                        "tips":{
-                           "count":176
-                        },
-                        "lists":{
-                           "groups":[
-                              {
-                                 "type":"created",
-                                 "count":1,
-                                 "items":[
-
-                                 ]
-                              }
-                           ]
-                        },
-                        "homeCity":"M&eacute;xico",
-                        "bio":"",
-                        "contact":{
-                           "twitter":"chilismexico"
-                        }
-                     }
                   ]
                }
             ]
+         },
+         "requests":{
+            "count":0
          },
          "lists":{
             "count":1,
@@ -798,25 +484,14 @@
                   "count":1,
                   "items":[
                      {
-                        "id":"55253746\/todos",
-                        "name":"Lista de cosas por hacer de Liz",
+                        "id":"88260846\/todos",
+                        "name":"Mi lista de cosas por hacer",
                         "description":"",
-                        "user":{
-                           "id":"55253746",
-                           "firstName":"Liz",
-                           "lastName":"Mozo",
-                           "gender":"female",
-                           "relationship":"friend",
-                           "photo":{
-                              "prefix":"https:\/\/irs1.4sqi.net\/img\/user\/",
-                              "suffix":"\/-KONDVJT5VXPQR4KN.jpg"
-                           }
-                        },
                         "editable":false,
                         "public":false,
                         "collaborative":false,
-                        "url":"\/lizmozo\/list\/todos",
-                        "canonicalUrl":"https:\/\/foursquare.com\/lizmozo\/list\/todos",
+                        "url":"\/dan_zx\/list\/todos",
+                        "canonicalUrl":"https:\/\/foursquare.com\/dan_zx\/list\/todos",
                         "followers":{
                            "count":0
                         },
@@ -836,74 +511,14 @@
             ]
          },
          "photos":{
-            "count":42,
+            "count":0,
             "items":[
-               {
-                  "id":"54210019498e0b2d72910842",
-                  "createdAt":1411448857,
-                  "source":{
-                     "name":"Swarm for iOS",
-                     "url":"https:\/\/www.swarmapp.com"
-                  },
-                  "prefix":"https:\/\/irs3.4sqi.net\/img\/general\/",
-                  "suffix":"\/55253746_jPf0LuHAufJKLAY0chEdcqrd8if4cNqXVDUflvtuD4g.jpg",
-                  "width":960,
-                  "height":720,
-                  "visibility":"public",
-                  "venue":{
-                     "id":"5409173c498ed70c35e8fe1a",
-                     "name":"La Altanera",
-                     "contact":{
-                        "phone":"012222838024",
-                        "formattedPhone":"01 222 283 8024",
-                        "twitter":"la_altanera"
-                     },
-                     "location":{
-                        "address":"Plaza Jazz",
-                        "lat":18.99449510323098,
-                        "lng":-98.27734082710437,
-                        "postalCode":"72890",
-                        "cc":"MX",
-                        "city":"San Andr&eacute;s Cholula",
-                        "state":"Puebla",
-                        "country":"M&eacute;xico",
-                        "formattedAddress":[
-                           "Plaza Jazz",
-                           "72890 San Andr&eacute;s Cholula, Puebla, Puebla"
-                        ]
-                     },
-                     "categories":[
-                        {
-                           "id":"4bf58dd8d48988d116941735",
-                           "name":"Bar",
-                           "pluralName":"Bares",
-                           "shortName":"Bar",
-                           "icon":{
-                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
-                              "suffix":".png"
-                           },
-                           "primary":true
-                        }
-                     ],
-                     "verified":false,
-                     "stats":{
-                        "checkinsCount":62,
-                        "usersCount":33,
-                        "tipCount":5
-                     },
-                     "like":false
-                  },
-                  "checkin":{
-                     "id":"54210016498ee0dbcada7610",
-                     "createdAt":1411448854,
-                     "type":"checkin",
-                     "shout":"Deliciosa la especialidad de la casa \"La Altanera\".🍸🍹",
-                     "timeZoneOffset":-300
-                  }
-               }
+
             ]
          },
-         "blockedStatus":"none"
+         "blockedStatus":"none",
+         "createdAt":1402863858,
+         "referralId":"u-88260846"
       }
    }
 }

@@ -17,13 +17,13 @@ package com.foursquare4j.response;
 
 public class Count {
 
-    private Long count;
+    private Integer count;
 
-    public Long getCount() {
+    public Integer getCount() {
         return count;
     }
 
-    protected void setCount(Long count) {
+    protected void setCount(Integer count) {
         this.count = count;
     }
 
