@@ -59,7 +59,7 @@ public class FoursquareApi {
     private Properties urls;
 
     /**
-     * Builds a new FoursquareApi.
+     * Builds a new FoursquareApi. Responses are in English by default.
      * 
      * @param clientId your Foursquare client id.
      * @param clientSecret your Foursquare client secret.

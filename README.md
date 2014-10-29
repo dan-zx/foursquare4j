@@ -13,6 +13,10 @@ FoursquareApi foursquareApi = new FoursquareApi("Client ID", "Client Secret");
 // Remeber that some API Endpoints doesn't require an access token.
 foursquareApi.setAccessToken("Access Token");
 
+// Optionally, set the locale for internationalized responses
+// By default, the responses are in English
+foursquareApi.setLocale(new Locale.Builder().setLanguage("es").build());
+
 // We can make request now.
 Result<User> result = foursquareApi.getUser("self");
 
