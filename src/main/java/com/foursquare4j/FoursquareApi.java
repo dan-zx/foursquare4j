@@ -18,9 +18,12 @@ package com.foursquare4j;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
+import java.util.Locale;
 import java.util.Properties;
 
+import com.foursquare4j.http.Header;
 import com.foursquare4j.http.Method;
 import com.foursquare4j.http.RequestBuilder;
 import com.foursquare4j.response.AccessTokenResponse;
@@ -32,6 +35,7 @@ import com.foursquare4j.response.User;
 import com.foursquare4j.response.Venue;
 
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.entity.ContentType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,6 +55,7 @@ public class FoursquareApi {
     private final String clientSecret;
 
     private String accessToken;
+    private Locale locale;
     private Properties urls;
 
     /**
@@ -62,6 +67,7 @@ public class FoursquareApi {
     public FoursquareApi(String clientId, String clientSecret) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
+        locale = Locale.ENGLISH;
         loadUrlsFile();
     }
 
@@ -78,9 +84,8 @@ public class FoursquareApi {
                 .addParameter("grant_type", "authorization_code")
                 .addParameter("code", authorizationCode)
                 .toString();
-        String json = new RequestBuilder(url)
+        String json = newRequestBuilder(url)
             .setMethod(Method.GET)
-            .addAcceptJsonHeaders()
             .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return new AccessTokenResponse(json);
@@ -99,10 +104,9 @@ public class FoursquareApi {
         String url = newApiUriBuilder()
                 .setPath(getString("foursquare.api.path.users", userId))
                 .toString();
-        String json = new RequestBuilder(url)
-            .setMethod(Method.GET)
-            .addAcceptJsonHeaders()
-            .callForResult();
+        String json = newRequestBuilder(url)
+                .setMethod(Method.GET)
+                .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, "user", User.class);
     }
@@ -120,10 +124,9 @@ public class FoursquareApi {
         String url = newApiUriBuilder()
                 .setPath(getString("foursquare.api.path.venues", venueId))
                 .toString();
-        String json = new RequestBuilder(url)
-            .setMethod(Method.GET)
-            .addAcceptJsonHeaders()
-            .callForResult();
+        String json = newRequestBuilder(url)
+                .setMethod(Method.GET)
+                .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, "venue", Venue.class);
     }
@@ -139,10 +142,9 @@ public class FoursquareApi {
         String url = newApiUriBuilder()
                 .setPath(getString("foursquare.api.path.venue_categories"))
                 .toString();
-        String json = new RequestBuilder(url)
-            .setMethod(Method.GET)
-            .addAcceptJsonHeaders()
-            .callForResult();
+        String json = newRequestBuilder(url)
+                .setMethod(Method.GET)
+                .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, "categories", Category[].class);
     }
@@ -262,10 +264,9 @@ public class FoursquareApi {
         if (url != null) uriBuilder.addParameter("url", url);
         if (providerId != null) uriBuilder.addParameter("providerId", providerId);
         if (linkedId != null) uriBuilder.addParameter("linkedId", linkedId);
-        String json = new RequestBuilder(uriBuilder.toString())
-            .setMethod(Method.GET)
-            .addAcceptJsonHeaders()
-            .callForResult();
+        String json = newRequestBuilder(uriBuilder.toString())
+                .setMethod(Method.GET)
+                .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, "venues", Venue[].class);
     }
@@ -351,10 +352,9 @@ public class FoursquareApi {
         if (price != null) uriBuilder.addParameter("price", String.valueOf(price));
         if (saved != null) uriBuilder.addParameter("saved", String.valueOf(saved ? 1 : 0));
         if (specials != null) uriBuilder.addParameter("specials", String.valueOf(specials ? 1 : 0));
-        String json = new RequestBuilder(uriBuilder.toString())
-            .setMethod(Method.GET)
-            .addAcceptJsonHeaders()
-            .callForResult();
+        String json = newRequestBuilder(uriBuilder.toString())
+                .setMethod(Method.GET)
+                .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, ExploreVenueGroups.class);
     }
@@ -366,6 +366,18 @@ public class FoursquareApi {
      */
     public void setAccessToken(String accessToken) {
         this.accessToken = accessToken;
+    }
+
+    /**
+     * Sets the locale for Foursquare responses.
+     * 
+     * @see <a
+     *      href="https://developer.foursquare.com/overview/versioning#internationalization">Versioning
+     *      &amp; Internationalization - Foursquare API Documentation</a>
+     * @param locale a locale.
+     */
+    public void setLocale(Locale locale) {
+        this.locale = locale;
     }
 
     /** Loads the url.properties file. */
@@ -424,5 +436,18 @@ public class FoursquareApi {
                     .addParameter("client_secret", clientSecret);
         }
         return uriBuilder;
+    }
+
+    /**
+     * Builds a new RequestBuilder preinitialized with locale and json headers.
+     * 
+     * @param url a URL.
+     * @return a new RequestBuilder.
+     */
+    private RequestBuilder newRequestBuilder(String url) {
+        return new RequestBuilder(url)
+            .addAcceptLanguageHeader(locale)
+            .addHeader(Header.ACCEPT, ContentType.APPLICATION_JSON.getMimeType())
+            .addHeader(Header.ACCEPT_CHARSET, StandardCharsets.UTF_8.name());
     }
 }

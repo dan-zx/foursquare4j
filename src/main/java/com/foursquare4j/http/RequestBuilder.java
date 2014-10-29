@@ -37,7 +37,6 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.conn.ConnectTimeoutException;
-import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
@@ -142,34 +141,14 @@ public class RequestBuilder {
     }
 
     /**
-     * Adds the Accept-Language header with the current locale.
-     *  
-     * @return this object.
-     */
-    public RequestBuilder addAcceptLanguageDefaultHeader() {
-        String clientAcceptLanguage = Locale.getDefault().toString().replace('_', '-');
-        headers.add(new BasicHeader(Header.ACCEPT_LANGUAGE.getValue(), clientAcceptLanguage));
-        return this;
-    }
-
-    /**
-     * Adds the following header:
-     * <table summary="">
-     *  <tr>
-     *    <td>Accept</td>
-     *    <td>application/json</td>
-     *  </tr>
-     *  <tr>
-     *    <td>Accept-Charset</td>
-     *    <td>UTF-8</td>
-     *  </tr>
-     * </table>
+     * Adds the Accept-Language header with the given locale.
      * 
+     * @param locale a locale.
      * @return this object.
      */
-    public RequestBuilder addAcceptJsonHeaders() {
-        headers.add(new BasicHeader(Header.ACCEPT.getValue(), ContentType.APPLICATION_JSON.getMimeType()));
-        headers.add(new BasicHeader(Header.ACCEPT_CHARSET.getValue(), StandardCharsets.UTF_8.name()));
+    public RequestBuilder addAcceptLanguageHeader(Locale locale) {
+        String clientAcceptLanguage = locale.toString().replace('_', '-');
+        headers.add(new BasicHeader(Header.ACCEPT_LANGUAGE.getValue(), clientAcceptLanguage));
         return this;
     }
 
