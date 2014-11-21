@@ -3,7 +3,42 @@ Foursquare4J
 
 Library created to perform requests to Foursquare API on Java.
 
-### Usage:
+### Maven dependency
+
+```xml
+<repositories>
+    <repository>
+      <id>dan_zx-repo</id>
+      <name>Dan ZX Repository</name>
+      <url>https://dl.dropboxusercontent.com/u/1995295/m2repository</url>
+    </repository>
+</repositories>
+
+<dependencies>
+  <dependency>
+      <groupId>com.foursquare</groupId>
+      <artifactId>foursquare4j</artifactId>
+      <version>${version}</version>
+    </dependency>
+</dependencies>
+```
+
+### Gradle dependency
+
+
+```groovy
+repositories {
+    maven {
+        url 'https://dl.dropboxusercontent.com/u/1995295/m2repository'
+    }
+}
+
+dependencies {
+    compile 'com.foursquare:foursquare4j:${version}'
+}
+```
+
+### Usage
 
 ```java
 // Create a new FoursquareApi. 
@@ -21,19 +56,19 @@ foursquareApi.setLocale(new Locale.Builder().setLanguage("es").build());
 Result<User> result = foursquareApi.getUser("self");
 
 if (result.getMeta().getCode() == 200) {
-	// if query was ok we can finally we do something with the data
-    // TODO: Do something with the data
+  // if query was ok we can finally we do something with the data
+  // TODO: Do something with the data
 	System.out.println(result.getResponse());
 } else {
-	// TODO: Proper error handling
-	System.out.println("Error occured: ");
-  	System.out.println("  code: " + result.getMeta().getCode());
-  	System.out.println("  type: " + result.getMeta().getErrorType());
-  	System.out.println("  detail: " + result.getMeta().getErrorDetail()); 
+  // TODO: Proper error handling
+  System.out.println("Error occured: ");
+	System.out.println("  code: " + result.getMeta().getCode());
+	System.out.println("  type: " + result.getMeta().getErrorType());
+	System.out.println("  detail: " + result.getMeta().getErrorDetail()); 
 }
 ```
 
-### Methods implemented:
+### Methods implemented
 
 * getAccessToken (in server app with native auth)
 * getUser (any)
