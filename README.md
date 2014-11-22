@@ -58,13 +58,13 @@ Result<User> result = foursquareApi.getUser("self");
 if (result.getMeta().getCode() == 200) {
   // if query was ok we can finally we do something with the data
   // TODO: Do something with the data
-	System.out.println(result.getResponse());
+  System.out.println(result.getResponse());
 } else {
   // TODO: Proper error handling
   System.out.println("Error occured: ");
-	System.out.println("  code: " + result.getMeta().getCode());
-	System.out.println("  type: " + result.getMeta().getErrorType());
-	System.out.println("  detail: " + result.getMeta().getErrorDetail()); 
+  System.out.println("  code: " + result.getMeta().getCode());
+  System.out.println("  type: " + result.getMeta().getErrorType());
+  System.out.println("  detail: " + result.getMeta().getErrorDetail()); 
 }
 ```
 
