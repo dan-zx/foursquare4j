@@ -1,6 +1,7 @@
 # Generated files
 target/
 build/
+bin/
 
 # Windows thumbnail db
 Thumbs.db
@@ -16,3 +17,6 @@ Thumbs.db
 # NetBeans project files
 nb-configuration.xml
 nbactions.xml
+
+# Gradle files
+.gradle/

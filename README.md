@@ -16,7 +16,7 @@ Library created to perform requests to Foursquare API on Java.
 
 <dependencies>
   <dependency>
-      <groupId>com.foursquare</groupId>
+      <groupId>com.foursquare4j</groupId>
       <artifactId>foursquare4j</artifactId>
       <version>${version}</version>
     </dependency>
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.foursquare:foursquare4j:${version}'
+    compile 'com.foursquare4j:foursquare4j:${version}'
 }
 ```
 
