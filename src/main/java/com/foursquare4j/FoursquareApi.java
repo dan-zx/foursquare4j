@@ -23,23 +23,25 @@ import java.text.MessageFormat;
 import java.util.Locale;
 import java.util.Properties;
 
+import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.entity.ContentType;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.foursquare4j.http.Header;
 import com.foursquare4j.http.Method;
 import com.foursquare4j.http.RequestBuilder;
 import com.foursquare4j.response.AccessTokenResponse;
 import com.foursquare4j.response.Category;
 import com.foursquare4j.response.ExploreVenueGroups;
+import com.foursquare4j.response.Group;
 import com.foursquare4j.response.Parser;
 import com.foursquare4j.response.Result;
 import com.foursquare4j.response.User;
 import com.foursquare4j.response.Venue;
-import com.foursquare4j.response.VenueGroup;
 
-import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.entity.ContentType;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.google.gson.reflect.TypeToken;
 
 /**
  * Class to handle methods used to perform requests to Foursquare.
@@ -370,9 +372,9 @@ public class FoursquareApi {
      *        category, all sub-categories will also match the query.
      * @param limit Number of results to return.
      * @param offset Used to page through results.
-     * @return
+     * @return a Group of Venues wrapped in a Result object.
      */
-    public Result<VenueGroup> getVenueLikes(String userId, Long beforeTimestamp, Long afterTimestamp, 
+    public Result<Group<Venue>> getVenueLikes(String userId, Long beforeTimestamp, Long afterTimestamp, 
             String categoryId, Integer limit, Integer offset) {
         URIBuilder uriBuilder = newApiUriBuilder()
                 .setPath(getString("foursquare.api.path.venue_likes", userId));
@@ -385,7 +387,7 @@ public class FoursquareApi {
                 .setMethod(Method.GET)
                 .callForResult();
         LOGGER.debug("Response ---> {}", json);
-        return Parser.parse(json, "venues", VenueGroup.class);
+        return Parser.parse(json, "venues", new TypeToken<Group<Venue>>(){});
     }
 
     /**

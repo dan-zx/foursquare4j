@@ -18,6 +18,7 @@ package com.foursquare4j.response;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
 
 public final class Parser {
 
@@ -35,10 +36,30 @@ public final class Parser {
         return result;
     }
 
+    public static <T> Result<T> parse(String json, TypeToken<T> type) {
+        JsonObject obj = new JsonParser().parse(json).getAsJsonObject();
+        Result.Meta meta = new Gson().fromJson(obj.get("meta"), Result.Meta.class);
+        T response = new Gson().fromJson(obj.get("response"), type.getType());
+        Result<T> result = new Result<>();
+        result.setMeta(meta);
+        result.setResponse(response);
+        return result;
+    }
+
     public static <T> Result<T> parse(String json, String responseType, Class<T> responseClass) {
         JsonObject obj = new JsonParser().parse(json).getAsJsonObject();
         Result.Meta meta = new Gson().fromJson(obj.get("meta"), Result.Meta.class);
         T response = new Gson().fromJson(obj.get("response").getAsJsonObject().get(responseType), responseClass);
+        Result<T> result = new Result<>();
+        result.setMeta(meta);
+        result.setResponse(response);
+        return result;
+    }
+
+    public static <T> Result<T> parse(String json, String responseType, TypeToken<T> type) {
+        JsonObject obj = new JsonParser().parse(json).getAsJsonObject();
+        Result.Meta meta = new Gson().fromJson(obj.get("meta"), Result.Meta.class);
+        T response = new Gson().fromJson(obj.get("response").getAsJsonObject().get(responseType), type.getType());
         Result<T> result = new Result<>();
         result.setMeta(meta);
         result.setResponse(response);

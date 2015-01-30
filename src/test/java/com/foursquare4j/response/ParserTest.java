@@ -23,6 +23,8 @@ import java.nio.file.Paths;
 
 import org.junit.Test;
 
+import com.google.gson.reflect.TypeToken;
+
 public class ParserTest {
 
     @Test
@@ -73,7 +75,7 @@ public class ParserTest {
     @Test
     public void testParseVenueGroup() throws Exception {
         String json = getJsonFrom("responses/venuelikes.json");
-        Result<VenueGroup> actualResult = Parser.parse(json, "venues", VenueGroup.class);
+        Result<Group<Venue>> actualResult = Parser.parse(json, "venues", new TypeToken<Group<Venue>>(){});
 
         assertThat(actualResult).isNotNull();
         assertThat(actualResult.getMeta()).isNotNull().isEqualTo(okMeta());

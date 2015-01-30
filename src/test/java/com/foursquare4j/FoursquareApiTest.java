@@ -23,10 +23,10 @@ import java.util.Properties;
 
 import com.foursquare4j.response.Category;
 import com.foursquare4j.response.ExploreVenueGroups;
+import com.foursquare4j.response.Group;
 import com.foursquare4j.response.Result;
 import com.foursquare4j.response.User;
 import com.foursquare4j.response.Venue;
-import com.foursquare4j.response.VenueGroup;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -96,7 +96,7 @@ public class FoursquareApiTest {
 
     @Test
     public void testGetVenueLikes() throws Exception {
-        Result<VenueGroup> actualResult = foursquareApi.getVenueLikes("57562206", null, null, null, null, null);
+        Result<Group<Venue>> actualResult = foursquareApi.getVenueLikes("57562206", null, null, null, null, null);
         
         assertThat(actualResult).isNotNull();
         assertThat(actualResult.getMeta()).isNotNull();
