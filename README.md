@@ -71,12 +71,14 @@ if (result.getMeta().getCode() == 200) {
 ### Methods implemented
 
 * getAccessToken (in server app with native auth)
-* getUser (any)
-* getVenue (any)
-* getCategories
+* getUser
+* getUserFriends
+* getUserVenueLikes
+* getVenue
+* getVenueCategories
 * searchVenues
 * exploreVenues
-* getVenueLikes
+
 
 ### License
 

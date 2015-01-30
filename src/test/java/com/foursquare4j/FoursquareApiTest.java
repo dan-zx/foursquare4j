@@ -53,6 +53,30 @@ public class FoursquareApiTest {
     }
 
     @Test
+    public void testGetUserFriends() throws Exception {
+        Result<Group<User>> actualResult = foursquareApi.getUserFriends("self", null, null);
+        
+        assertThat(actualResult).isNotNull();
+        assertThat(actualResult.getMeta()).isNotNull();
+        assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
+        assertThat(actualResult.getResponse()).isNotNull();
+        assertThat(actualResult.getResponse().getCount()).isNotNull();
+        assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty();
+    }
+
+    @Test
+    public void testGetUserVenueLikes() throws Exception {
+        Result<Group<Venue>> actualResult = foursquareApi.getUserVenueLikes("57562206", null, null, null, null, null);
+        
+        assertThat(actualResult).isNotNull();
+        assertThat(actualResult.getMeta()).isNotNull();
+        assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
+        assertThat(actualResult.getResponse()).isNotNull();
+        assertThat(actualResult.getResponse().getCount()).isNotNull();
+        assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty();
+    }
+
+    @Test
     public void testGetVenue() throws Exception {
         Result<Venue> actualResult = foursquareApi.getVenue("40a55d80f964a52020f31ee3");
 
@@ -63,8 +87,8 @@ public class FoursquareApiTest {
     }
 
     @Test
-    public void testGetCategories() throws Exception {
-        Result<Category[]> actualResult = foursquareApi.getCategories();
+    public void testGetVenueCategories() throws Exception {
+        Result<Category[]> actualResult = foursquareApi.getVenueCategories();
 
         assertThat(actualResult).isNotNull();
         assertThat(actualResult.getMeta()).isNotNull();
@@ -92,18 +116,6 @@ public class FoursquareApiTest {
         assertThat(actualResult.getResponse()).isNotNull();
         assertThat(actualResult.getResponse().getGroups()).isNotNull().isNotEmpty();
 
-    }
-
-    @Test
-    public void testGetVenueLikes() throws Exception {
-        Result<Group<Venue>> actualResult = foursquareApi.getVenueLikes("57562206", null, null, null, null, null);
-        
-        assertThat(actualResult).isNotNull();
-        assertThat(actualResult.getMeta()).isNotNull();
-        assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
-        assertThat(actualResult.getResponse()).isNotNull();
-        assertThat(actualResult.getResponse().getCount()).isNotNull();
-        assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty();
     }
 
     private Properties loadConfigProperties() {

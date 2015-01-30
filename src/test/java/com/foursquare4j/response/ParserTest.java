@@ -52,6 +52,32 @@ public class ParserTest {
     }
 
     @Test
+    public void testParseFriends() throws Exception {
+        String json = getJsonFrom("responses/friends.json");
+        Result<Group<User>> actualResult = Parser.parse(json, "friends", new TypeToken<Group<User>>() {
+        });
+
+        assertThat(actualResult).isNotNull();
+        assertThat(actualResult.getMeta()).isNotNull().isEqualTo(okMeta());
+        assertThat(actualResult.getResponse()).isNotNull();
+        assertThat(actualResult.getResponse().getCount()).isNotNull().isEqualTo(12);
+        assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty().hasSize(12);
+    }
+
+    @Test
+    public void testParseVenueGroup() throws Exception {
+        String json = getJsonFrom("responses/venuelikes.json");
+        Result<Group<Venue>> actualResult = Parser.parse(json, "venues", new TypeToken<Group<Venue>>() {
+        });
+
+        assertThat(actualResult).isNotNull();
+        assertThat(actualResult.getMeta()).isNotNull().isEqualTo(okMeta());
+        assertThat(actualResult.getResponse()).isNotNull();
+        assertThat(actualResult.getResponse().getCount()).isNotNull().isEqualTo(2);
+        assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty().hasSize(2);
+    }
+
+    @Test
     public void testParseVenue() throws Exception {
         String json = getJsonFrom("responses/venue.json");
         Result<Venue> actualResult = Parser.parse(json, "venue", Venue.class);
@@ -70,18 +96,6 @@ public class ParserTest {
         assertThat(actualResult.getMeta()).isNotNull().isEqualTo(okMeta());
         assertThat(actualResult.getResponse()).isNotNull();
         assertThat(actualResult.getResponse().getGroups()).isNotNull().isNotEmpty().hasSize(1);
-    }
-
-    @Test
-    public void testParseVenueGroup() throws Exception {
-        String json = getJsonFrom("responses/venuelikes.json");
-        Result<Group<Venue>> actualResult = Parser.parse(json, "venues", new TypeToken<Group<Venue>>(){});
-
-        assertThat(actualResult).isNotNull();
-        assertThat(actualResult.getMeta()).isNotNull().isEqualTo(okMeta());
-        assertThat(actualResult.getResponse()).isNotNull();
-        assertThat(actualResult.getResponse().getCount()).isNotNull().isEqualTo(2);
-        assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty().hasSize(2);
     }
 
     private Result.Meta okMeta() {

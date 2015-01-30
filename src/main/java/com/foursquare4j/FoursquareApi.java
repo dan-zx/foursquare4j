@@ -115,6 +115,55 @@ public class FoursquareApi {
     }
 
     /**
+     * Returns an array of a user's friends.
+     * 
+     * @param userId Identity of the user to get friends of. Pass self to get friends of the acting
+     *        user.
+     * @param limit Number of results to return, up to 500.
+     * @param offset Used to page through results.
+     * @return a Group of Users wrapped in a Result object.
+     */
+    public Result<Group<User>> getUserFriends(String userId, Integer limit, Integer offset) {
+        URIBuilder uriBuilder = newApiUriBuilder()
+                .setPath(getString("foursquare.api.path.friends", userId));
+        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
+        if (offset != null) uriBuilder.addParameter("offset", String.valueOf(offset));
+        String json = newRequestBuilder(uriBuilder.toString())
+                .setMethod(Method.GET)
+                .callForResult();
+        LOGGER.debug("Response ---> {}", json);
+        return Parser.parse(json, "friends", new TypeToken<Group<User>>(){});
+    }
+
+    /**
+     * Returns a list of venues liked by the specified user.
+     * 
+     * @param userId User ID or self.
+     * @param beforeTimestamp Seconds since epoch..
+     * @param afterTimestamp Seconds since epoch.
+     * @param categoryId Limits returned venues to those in this category. If specifying a top-level
+     *        category, all sub-categories will also match the query.
+     * @param limit Number of results to return.
+     * @param offset Used to page through results.
+     * @return a Group of Venues wrapped in a Result object.
+     */
+    public Result<Group<Venue>> getUserVenueLikes(String userId, Long beforeTimestamp, 
+            Long afterTimestamp, String categoryId, Integer limit, Integer offset) {
+        URIBuilder uriBuilder = newApiUriBuilder()
+                .setPath(getString("foursquare.api.path.venue_likes", userId));
+        if (beforeTimestamp != null) uriBuilder.addParameter("beforeTimestamp", String.valueOf(beforeTimestamp));
+        if (afterTimestamp != null) uriBuilder.addParameter("afterTimestamp", String.valueOf(afterTimestamp));
+        if (categoryId != null) uriBuilder.addParameter("categoryId", categoryId);
+        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
+        if (offset != null) uriBuilder.addParameter("offset", String.valueOf(offset));
+        String json = newRequestBuilder(uriBuilder.toString())
+                .setMethod(Method.GET)
+                .callForResult();
+        LOGGER.debug("Response ---> {}", json);
+        return Parser.parse(json, "venues", new TypeToken<Group<Venue>>(){});
+    }
+
+    /**
      * Gives details about a venue, including location, mayorship, tags, tips, specials, and
      * category. Authenticated users will also receive information about who is here now.
      * 
@@ -141,7 +190,7 @@ public class FoursquareApi {
      *      Foursquare API Documentation</a>
      * @return an array of Category objects wrapped in a Result object.
      */
-    public Result<Category[]> getCategories() {
+    public Result<Category[]> getVenueCategories() {
         String url = newApiUriBuilder()
                 .setPath(getString("foursquare.api.path.venue_categories"))
                 .toString();
@@ -360,34 +409,6 @@ public class FoursquareApi {
                 .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, ExploreVenueGroups.class);
-    }
-
-    /**
-     * Returns a list of venues liked by the specified user.
-     * 
-     * @param userId User ID or self.
-     * @param beforeTimestamp Seconds since epoch..
-     * @param afterTimestamp Seconds since epoch.
-     * @param categoryId Limits returned venues to those in this category. If specifying a top-level
-     *        category, all sub-categories will also match the query.
-     * @param limit Number of results to return.
-     * @param offset Used to page through results.
-     * @return a Group of Venues wrapped in a Result object.
-     */
-    public Result<Group<Venue>> getVenueLikes(String userId, Long beforeTimestamp, Long afterTimestamp, 
-            String categoryId, Integer limit, Integer offset) {
-        URIBuilder uriBuilder = newApiUriBuilder()
-                .setPath(getString("foursquare.api.path.venue_likes", userId));
-        if (beforeTimestamp != null) uriBuilder.addParameter("beforeTimestamp", String.valueOf(beforeTimestamp));
-        if (afterTimestamp != null) uriBuilder.addParameter("afterTimestamp", String.valueOf(afterTimestamp));
-        if (categoryId != null) uriBuilder.addParameter("categoryId", categoryId);
-        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
-        if (offset != null) uriBuilder.addParameter("offset", String.valueOf(offset));
-        String json = newRequestBuilder(uriBuilder.toString())
-                .setMethod(Method.GET)
-                .callForResult();
-        LOGGER.debug("Response ---> {}", json);
-        return Parser.parse(json, "venues", new TypeToken<Group<Venue>>(){});
     }
 
     /**
