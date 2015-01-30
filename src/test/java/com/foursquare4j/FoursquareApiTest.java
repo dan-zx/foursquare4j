@@ -26,6 +26,7 @@ import com.foursquare4j.response.ExploreVenueGroups;
 import com.foursquare4j.response.Result;
 import com.foursquare4j.response.User;
 import com.foursquare4j.response.Venue;
+import com.foursquare4j.response.VenueGroup;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -82,7 +83,7 @@ public class FoursquareApiTest {
     }
 
     @Test
-    public void testExploreVenues()throws Exception {
+    public void testExploreVenues() throws Exception {
         Result<ExploreVenueGroups> actualResult = foursquareApi.exploreVenues("19.026731,-98.234854", null, null, null, null, 1000, null, null, 5, null, null, null, null, null, null, null, null, null, null, null, null);
 
         assertThat(actualResult).isNotNull();
@@ -91,6 +92,18 @@ public class FoursquareApiTest {
         assertThat(actualResult.getResponse()).isNotNull();
         assertThat(actualResult.getResponse().getGroups()).isNotNull().isNotEmpty();
 
+    }
+
+    @Test
+    public void testGetVenueLikes() throws Exception {
+        Result<VenueGroup> actualResult = foursquareApi.getVenueLikes("57562206", null, null, null, null, null);
+        
+        assertThat(actualResult).isNotNull();
+        assertThat(actualResult.getMeta()).isNotNull();
+        assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
+        assertThat(actualResult.getResponse()).isNotNull();
+        assertThat(actualResult.getResponse().getCount()).isNotNull();
+        assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty();
     }
 
     private Properties loadConfigProperties() {

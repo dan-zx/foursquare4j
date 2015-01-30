@@ -33,6 +33,7 @@ import com.foursquare4j.response.Parser;
 import com.foursquare4j.response.Result;
 import com.foursquare4j.response.User;
 import com.foursquare4j.response.Venue;
+import com.foursquare4j.response.VenueGroup;
 
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ContentType;
@@ -357,6 +358,34 @@ public class FoursquareApi {
                 .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, ExploreVenueGroups.class);
+    }
+
+    /**
+     * Returns a list of venues liked by the specified user.
+     * 
+     * @param userId User ID or self.
+     * @param beforeTimestamp Seconds since epoch..
+     * @param afterTimestamp Seconds since epoch.
+     * @param categoryId Limits returned venues to those in this category. If specifying a top-level
+     *        category, all sub-categories will also match the query.
+     * @param limit Number of results to return.
+     * @param offset Used to page through results.
+     * @return
+     */
+    public Result<VenueGroup> getVenueLikes(String userId, Long beforeTimestamp, Long afterTimestamp, 
+            String categoryId, Integer limit, Integer offset) {
+        URIBuilder uriBuilder = newApiUriBuilder()
+                .setPath(getString("foursquare.api.path.venue_likes", userId));
+        if (beforeTimestamp != null) uriBuilder.addParameter("beforeTimestamp", String.valueOf(beforeTimestamp));
+        if (afterTimestamp != null) uriBuilder.addParameter("afterTimestamp", String.valueOf(afterTimestamp));
+        if (categoryId != null) uriBuilder.addParameter("categoryId", categoryId);
+        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
+        if (offset != null) uriBuilder.addParameter("offset", String.valueOf(offset));
+        String json = newRequestBuilder(uriBuilder.toString())
+                .setMethod(Method.GET)
+                .callForResult();
+        LOGGER.debug("Response ---> {}", json);
+        return Parser.parse(json, "venues", VenueGroup.class);
     }
 
     /**

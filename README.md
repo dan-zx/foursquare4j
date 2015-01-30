@@ -76,6 +76,7 @@ if (result.getMeta().getCode() == 200) {
 * getCategories
 * searchVenues
 * exploreVenues
+* getVenueLikes
 
 ### License
 
