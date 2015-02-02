@@ -36,6 +36,7 @@ import com.foursquare4j.response.AccessTokenResponse;
 import com.foursquare4j.response.Category;
 import com.foursquare4j.response.ExploreVenueGroups;
 import com.foursquare4j.response.Group;
+import com.foursquare4j.response.List;
 import com.foursquare4j.response.Parser;
 import com.foursquare4j.response.Result;
 import com.foursquare4j.response.User;
@@ -133,6 +134,37 @@ public class FoursquareApi {
                 .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, "friends", new TypeToken<Group<User>>(){});
+    }
+
+    /**
+     * Returns tips from a user.
+     * 
+     * @param userId Identity of the user to get tips from. Pass self to get tips of the acting
+     *        user.
+     * @param limit Number of results to return, up to 200.
+     * @param offset The number of results to skip. Used to page through results.
+     * @param llBounds optional Restricts the returned results to the input bounding box.
+     * @param categoryId optional Restricts the returned results to venues matching the input
+     *        category id.
+     * @param sort optional Sorts the list items. Possible values are recent and nearby. recent
+     *        sorts the list items by the date added to the list. nearby sorts the list items by the
+     *        distance from the center of the provided llBounds.
+     * @return a List of tips
+     */
+    public Result<List> getUserTips(String userId, Integer limit, Integer offset, 
+            String llBounds, String categoryId, String sort) {
+        URIBuilder uriBuilder = newApiUriBuilder()
+                .setPath(getString("foursquare.api.path.tips", userId));
+        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
+        if (offset != null) uriBuilder.addParameter("offset", String.valueOf(offset));
+        if (llBounds != null) uriBuilder.addParameter("llBounds", llBounds);
+        if (categoryId != null) uriBuilder.addParameter("categoryId", categoryId);
+        if (sort != null) uriBuilder.addParameter("sort", sort);
+        String json = newRequestBuilder(uriBuilder.toString())
+                .setMethod(Method.GET)
+                .callForResult();
+        LOGGER.debug("Response ---> {}", json);
+        return Parser.parse(json, "list", List.class);
     }
 
     /**

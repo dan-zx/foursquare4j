@@ -24,6 +24,7 @@ import java.util.Properties;
 import com.foursquare4j.response.Category;
 import com.foursquare4j.response.ExploreVenueGroups;
 import com.foursquare4j.response.Group;
+import com.foursquare4j.response.List;
 import com.foursquare4j.response.Result;
 import com.foursquare4j.response.User;
 import com.foursquare4j.response.Venue;
@@ -62,6 +63,18 @@ public class FoursquareApiTest {
         assertThat(actualResult.getResponse()).isNotNull();
         assertThat(actualResult.getResponse().getCount()).isNotNull();
         assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty();
+    }
+
+    @Test
+    public void testGetUserTips() throws Exception {
+        Result<List> actualResult = foursquareApi.getUserTips("self", null, null, null, null, null);
+
+        assertThat(actualResult).isNotNull();
+        assertThat(actualResult.getMeta()).isNotNull();
+        assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
+        assertThat(actualResult.getResponse()).isNotNull();
+        assertThat(actualResult.getResponse().getListItems().getCount()).isNotNull();
+        assertThat(actualResult.getResponse().getListItems().getItems()).isNotNull().isNotEmpty();
     }
 
     @Test

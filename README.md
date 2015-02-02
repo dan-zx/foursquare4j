@@ -73,6 +73,7 @@ if (result.getMeta().getCode() == 200) {
 * getAccessToken (in server app with native auth)
 * getUser
 * getUserFriends
+* getUserTips
 * getUserVenueLikes
 * getVenue
 * getVenueCategories

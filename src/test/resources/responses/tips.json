@@ -1,0 +1,247 @@
+{
+   "meta":{
+      "code":200
+   },
+   "notifications":[
+      {
+         "type":"notificationTray",
+         "item":{
+            "unreadCount":0
+         }
+      }
+   ],
+   "response":{
+      "list":{
+         "id":"88260846\/tips",
+         "name":"Mis tips",
+         "description":"",
+         "type":"dones",
+         "user":{
+            "id":"88260846",
+            "firstName":"Daniel",
+            "lastName":"Pedraza",
+            "gender":"male",
+            "relationship":"self",
+            "photo":{
+               "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
+               "suffix":"\/88260846-Q1M41BHXTDOTJJA3.jpg"
+            }
+         },
+         "editable":false,
+         "public":false,
+         "collaborative":false,
+         "url":"https:\/\/foursquare.com\/user\/88260846\/list\/tips",
+         "canonicalUrl":"https:\/\/foursquare.comhttps:\/\/foursquare.com\/user\/88260846\/list\/tips",
+         "visitedCount":2,
+         "venueCount":2,
+         "following":false,
+         "followers":{
+            "count":0
+         },
+         "collaborators":{
+            "count":0,
+            "items":[
+
+            ]
+         },
+         "saves":{
+
+         },
+         "listItems":{
+            "count":2,
+            "items":[
+               {
+                  "id":"t548a39d511d2f627e637690c",
+                  "createdAt":1418344917,
+                  "tip":{
+                     "id":"548a39d511d2f627e637690c",
+                     "createdAt":1418344917,
+                     "text":"La pizza Della Casa es buenísima",
+                     "type":"user",
+                     "canonicalUrl":"https:\/\/foursquare.com\/item\/548a39d511d2f627e637690c",
+                     "likes":{
+                        "count":0,
+                        "groups":[
+
+                        ]
+                     },
+                     "like":false,
+                     "viewCount":11,
+                     "todo":{
+                        "count":0
+                     },
+                     "saves":{
+
+                     },
+                     "user":{
+                        "id":"88260846",
+                        "firstName":"Daniel",
+                        "lastName":"Pedraza",
+                        "gender":"male",
+                        "relationship":"self",
+                        "photo":{
+                           "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
+                           "suffix":"\/88260846-Q1M41BHXTDOTJJA3.jpg"
+                        }
+                     }
+                  },
+                  "venue":{
+                     "id":"4c4764c796abd13a84967001",
+                     "name":"Il Forno A Legna",
+                     "contact":{
+
+                     },
+                     "location":{
+                        "address":"Av. Aztlán",
+                        "crossStreet":"Ret. Calmecac",
+                        "lat":19.061128932069035,
+                        "lng":-98.26813854055743,
+                        "postalCode":"72760",
+                        "cc":"MX",
+                        "city":"Puebla de Zaragoza",
+                        "state":"Puebla",
+                        "country":"México",
+                        "formattedAddress":[
+                           "Av. Aztlán (Ret. Calmecac)",
+                           "72760 Puebla de Zaragoza, Puebla"
+                        ]
+                     },
+                     "categories":[
+                        {
+                           "id":"4bf58dd8d48988d1ca941735",
+                           "name":"Pizzería",
+                           "pluralName":"Pizzerías",
+                           "shortName":"Pizza",
+                           "icon":{
+                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/pizza_",
+                              "suffix":".png"
+                           },
+                           "primary":true
+                        }
+                     ],
+                     "verified":false,
+                     "stats":{
+                        "checkinsCount":2768,
+                        "usersCount":1492,
+                        "tipCount":73
+                     },
+                     "like":true,
+                     "beenHere":{
+                        "count":1,
+                        "marked":true
+                     },
+                     "specials":{
+                        "count":0,
+                        "items":[
+
+                        ]
+                     },
+                     "hereNow":{
+                        "count":0,
+                        "summary":"Nadie aquí",
+                        "groups":[
+
+                        ]
+                     }
+                  }
+               },
+               {
+                  "id":"t5431c247498e122966ae9b36",
+                  "createdAt":1412547143,
+                  "tip":{
+                     "id":"5431c247498e122966ae9b36",
+                     "createdAt":1412547143,
+                     "text":"Los chilaquiles toluqueños son muy buenos",
+                     "type":"user",
+                     "canonicalUrl":"https:\/\/foursquare.com\/item\/5431c247498e122966ae9b36",
+                     "likes":{
+                        "count":0,
+                        "groups":[
+
+                        ]
+                     },
+                     "like":false,
+                     "viewCount":7,
+                     "todo":{
+                        "count":0
+                     },
+                     "saves":{
+
+                     },
+                     "user":{
+                        "id":"88260846",
+                        "firstName":"Daniel",
+                        "lastName":"Pedraza",
+                        "gender":"male",
+                        "relationship":"self",
+                        "photo":{
+                           "prefix":"https:\/\/irs3.4sqi.net\/img\/user\/",
+                           "suffix":"\/88260846-Q1M41BHXTDOTJJA3.jpg"
+                        }
+                     }
+                  },
+                  "venue":{
+                     "id":"4bfee1c0b40eef3b23a8b2df",
+                     "name":"Vips",
+                     "contact":{
+
+                     },
+                     "location":{
+                        "address":"Blvd. Altixco",
+                        "crossStreet":"Circuito Juan Pablo II",
+                        "lat":19.04524319840765,
+                        "lng":-98.2357120513916,
+                        "postalCode":"72400",
+                        "cc":"MX",
+                        "city":"Puebla de Zaragoza",
+                        "state":"Puebla",
+                        "country":"México",
+                        "formattedAddress":[
+                           "Blvd. Altixco (Circuito Juan Pablo II)",
+                           "72400 Puebla de Zaragoza, Puebla"
+                        ]
+                     },
+                     "categories":[
+                        {
+                           "id":"4bf58dd8d48988d1c4941735",
+                           "name":"Restaurante",
+                           "pluralName":"Restaurantes",
+                           "shortName":"Restaurante",
+                           "icon":{
+                              "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/default_",
+                              "suffix":".png"
+                           },
+                           "primary":true
+                        }
+                     ],
+                     "verified":false,
+                     "stats":{
+                        "checkinsCount":1997,
+                        "usersCount":1085,
+                        "tipCount":31
+                     },
+                     "like":false,
+                     "beenHere":{
+                        "count":1,
+                        "marked":true
+                     },
+                     "specials":{
+                        "count":0,
+                        "items":[
+
+                        ]
+                     },
+                     "hereNow":{
+                        "count":0,
+                        "summary":"Nadie aquí",
+                        "groups":[
+
+                        ]
+                     }
+                  }
+               }
+            ]
+         }
+      }
+   }
+}

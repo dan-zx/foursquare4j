@@ -54,8 +54,7 @@ public class ParserTest {
     @Test
     public void testParseFriends() throws Exception {
         String json = getJsonFrom("responses/friends.json");
-        Result<Group<User>> actualResult = Parser.parse(json, "friends", new TypeToken<Group<User>>() {
-        });
+        Result<Group<User>> actualResult = Parser.parse(json, "friends", new TypeToken<Group<User>>(){});
 
         assertThat(actualResult).isNotNull();
         assertThat(actualResult.getMeta()).isNotNull().isEqualTo(okMeta());
@@ -65,10 +64,22 @@ public class ParserTest {
     }
 
     @Test
+    public void testParseTips() throws Exception {
+        String json = getJsonFrom("responses/tips.json");
+        Result<List> actualResult = Parser.parse(json, "list", List.class);
+
+        assertThat(actualResult).isNotNull();
+        assertThat(actualResult.getMeta()).isNotNull().isEqualTo(okMeta());
+        assertThat(actualResult.getResponse()).isNotNull();
+        assertThat(actualResult.getResponse().getListItems()).isNotNull();
+        assertThat(actualResult.getResponse().getListItems().getCount()).isNotNull().isEqualTo(2);
+        assertThat(actualResult.getResponse().getListItems().getItems()).isNotNull().isNotEmpty().hasSize(2);
+    }
+
+    @Test
     public void testParseVenueGroup() throws Exception {
         String json = getJsonFrom("responses/venuelikes.json");
-        Result<Group<Venue>> actualResult = Parser.parse(json, "venues", new TypeToken<Group<Venue>>() {
-        });
+        Result<Group<Venue>> actualResult = Parser.parse(json, "venues", new TypeToken<Group<Venue>>(){});
 
         assertThat(actualResult).isNotNull();
         assertThat(actualResult.getMeta()).isNotNull().isEqualTo(okMeta());
