@@ -131,6 +131,18 @@ public class FoursquareApiTest {
 
     }
 
+    @Test 
+    public void testGetNextVenues() throws Exception {
+        Result<Group<Venue>> actualResult = foursquareApi.getNextVenues("4b9d70a1f964a520e2ac36e3");
+        
+        assertThat(actualResult).isNotNull();
+        assertThat(actualResult.getMeta()).isNotNull();
+        assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
+        assertThat(actualResult.getResponse()).isNotNull();
+        assertThat(actualResult.getResponse().getCount()).isNotNull();
+        assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty();
+    }
+
     private Properties loadConfigProperties() {
         Properties configs = new Properties();
         InputStream stream = null;

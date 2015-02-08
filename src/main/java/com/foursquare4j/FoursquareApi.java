@@ -53,7 +53,7 @@ import com.google.gson.reflect.TypeToken;
 public class FoursquareApi {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FoursquareApi.class);
-    private static final String VERSION = "20141021";
+    private static final String VERSION = "20150208";
 
     private final String clientId;
     private final String clientSecret;
@@ -441,6 +441,25 @@ public class FoursquareApi {
                 .callForResult();
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, ExploreVenueGroups.class);
+    }
+
+    /**
+     * Returns venues that people often check in to after the current venue. Up to 5 venues are
+     * returned in each query, and results are sorted by how many people have visited that venue
+     * after the current one. Homes are never returned in results.
+     * 
+     * @param venueId ID of the venue you want to see next venue information about.
+     * @return Compact venues.
+     */
+    public Result<Group<Venue>> getNextVenues(String venueId) {
+        String url = newApiUriBuilder()
+                .setPath(getString("foursquare.api.path.next_venues", venueId))
+                .toString();
+        String json = newRequestBuilder(url)
+                .setMethod(Method.GET)
+                .callForResult();
+        LOGGER.debug("Response ---> {}", json);
+        return Parser.parse(json, "nextVenues", new TypeToken<Group<Venue>>(){});
     }
 
     /**

@@ -1,0 +1,246 @@
+{
+   "meta":{
+      "code":200
+   },
+   "notifications":[
+      {
+         "type":"notificationTray",
+         "item":{
+            "unreadCount":0
+         }
+      }
+   ],
+   "response":{
+      "nextVenues":{
+         "count":5,
+         "items":[
+            {
+               "id":"4bad0850f964a52082263be3",
+               "name":"Cinépolis",
+               "contact":{
+                  "phone":"012222250081",
+                  "formattedPhone":"01 222 225 0081",
+                  "twitter":"cinepolis"
+               },
+               "location":{
+                  "address":"Centro Comercial Angelópolis",
+                  "crossStreet":"Blvd. del Niño Poblano 2510",
+                  "lat":19.032099226143384,
+                  "lng":-98.23300838470459,
+                  "postalCode":"72450",
+                  "cc":"MX",
+                  "city":"Puebla de Zaragoza",
+                  "state":"Puebla",
+                  "country":"México",
+                  "formattedAddress":[
+                     "Centro Comercial Angelópolis (Blvd. del Niño Poblano 2510)",
+                     "72450 Puebla de Zaragoza, Puebla"
+                  ]
+               },
+               "categories":[
+                  {
+                     "id":"4bf58dd8d48988d180941735",
+                     "name":"Multicine",
+                     "pluralName":"Multicines",
+                     "shortName":"Multicine",
+                     "icon":{
+                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/movietheater_",
+                        "suffix":".png"
+                     },
+                     "primary":true
+                  }
+               ],
+               "verified":true,
+               "stats":{
+                  "checkinsCount":39002,
+                  "usersCount":10678,
+                  "tipCount":181
+               },
+               "url":"http:\/\/www.cinepolis.com",
+               "reservations":{
+                  "url":"http:\/\/www.opentable.com\/single.aspx?rid=58000&ref=9601"
+               }
+            },
+            {
+               "id":"4c2b7f8257a9c9b6affff567",
+               "name":"Liverpool",
+               "contact":{
+                  "phone":"012222297500",
+                  "formattedPhone":"01 222 229 7500",
+                  "facebook":"140142041216",
+                  "facebookUsername":"liverpoolmexico",
+                  "facebookName":"Liverpool"
+               },
+               "location":{
+                  "address":"Centro Comercial Angelópolis",
+                  "crossStreet":"Blvd. del Niño Poblano 2510",
+                  "lat":19.03174044908608,
+                  "lng":-98.23100973086046,
+                  "postalCode":"72450",
+                  "cc":"MX",
+                  "city":"Puebla de Zaragoza",
+                  "state":"Puebla",
+                  "country":"México",
+                  "formattedAddress":[
+                     "Centro Comercial Angelópolis (Blvd. del Niño Poblano 2510)",
+                     "72450 Puebla de Zaragoza, Puebla"
+                  ]
+               },
+               "categories":[
+                  {
+                     "id":"4bf58dd8d48988d1f6941735",
+                     "name":"Gran tienda",
+                     "pluralName":"Tiendas por departamentos",
+                     "shortName":"Gran tienda",
+                     "icon":{
+                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/departmentstore_",
+                        "suffix":".png"
+                     },
+                     "primary":true
+                  }
+               ],
+               "verified":true,
+               "stats":{
+                  "checkinsCount":13539,
+                  "usersCount":5071,
+                  "tipCount":59
+               },
+               "url":"http:\/\/www.liverpool.com.mx",
+               "storeId":"Puebla"
+            },
+            {
+               "id":"4c2b855dae6820a191f21743",
+               "name":"El Palacio de Hierro",
+               "contact":{
+                  "phone":"012222738800",
+                  "formattedPhone":"01 222 273 8800",
+                  "twitter":"palaciohierro"
+               },
+               "location":{
+                  "address":"Blvd. del Niño Poblano No. 2510",
+                  "lat":19.03148054131743,
+                  "lng":-98.2344138622284,
+                  "postalCode":"72450",
+                  "cc":"MX",
+                  "city":"Puebla de Zaragoza",
+                  "state":"Puebla",
+                  "country":"México",
+                  "formattedAddress":[
+                     "Blvd. del Niño Poblano No. 2510",
+                     "72450 Puebla de Zaragoza, Puebla"
+                  ]
+               },
+               "categories":[
+                  {
+                     "id":"4bf58dd8d48988d1f6941735",
+                     "name":"Gran tienda",
+                     "pluralName":"Tiendas por departamentos",
+                     "shortName":"Gran tienda",
+                     "icon":{
+                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/departmentstore_",
+                        "suffix":".png"
+                     },
+                     "primary":true
+                  }
+               ],
+               "verified":true,
+               "stats":{
+                  "checkinsCount":13181,
+                  "usersCount":4999,
+                  "tipCount":60
+               },
+               "url":"http:\/\/www.elpalaciodehierro.com.mx",
+               "storeId":""
+            },
+            {
+               "id":"4be47d022457a593414daa15",
+               "name":"Chili's",
+               "contact":{
+                  "phone":"012222257299",
+                  "formattedPhone":"01 222 225 7299",
+                  "twitter":"chilismexico"
+               },
+               "location":{
+                  "address":"Centro Comercial Angelópolis",
+                  "crossStreet":"Blvd. del Niño Poblano 2510",
+                  "lat":19.032072262618215,
+                  "lng":-98.23318352096007,
+                  "postalCode":"72450",
+                  "cc":"MX",
+                  "city":"Puebla de Zaragoza",
+                  "state":"Puebla",
+                  "country":"México",
+                  "formattedAddress":[
+                     "Centro Comercial Angelópolis (Blvd. del Niño Poblano 2510)",
+                     "72450 Puebla de Zaragoza, Puebla"
+                  ]
+               },
+               "categories":[
+                  {
+                     "id":"4bf58dd8d48988d14e941735",
+                     "name":"Restaurante americano",
+                     "pluralName":"Restaurantes americanos",
+                     "shortName":"Americana",
+                     "icon":{
+                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/default_",
+                        "suffix":".png"
+                     },
+                     "primary":true
+                  }
+               ],
+               "verified":true,
+               "stats":{
+                  "checkinsCount":9147,
+                  "usersCount":5008,
+                  "tipCount":88
+               },
+               "url":"http:\/\/www.chilis.com.mx",
+               "storeId":""
+            },
+            {
+               "id":"4c30ccf46f1fef3b89d8eb3d",
+               "name":"Italianni's",
+               "contact":{
+                  "phone":"012222250446",
+                  "formattedPhone":"01 222 225 0446",
+                  "twitter":"italiannismx"
+               },
+               "location":{
+                  "address":"Centro Comercial Angelópolis",
+                  "crossStreet":"Blvd. del Niño Poblano 2510",
+                  "lat":19.031815239952024,
+                  "lng":-98.23190331459045,
+                  "postalCode":"72450",
+                  "cc":"MX",
+                  "city":"Puebla de Zaragoza",
+                  "state":"Puebla",
+                  "country":"México",
+                  "formattedAddress":[
+                     "Centro Comercial Angelópolis (Blvd. del Niño Poblano 2510)",
+                     "72450 Puebla de Zaragoza, Puebla"
+                  ]
+               },
+               "categories":[
+                  {
+                     "id":"4bf58dd8d48988d110941735",
+                     "name":"Restaurante italiano",
+                     "pluralName":"Restaurantes italianos",
+                     "shortName":"Italiana",
+                     "icon":{
+                        "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/italian_",
+                        "suffix":".png"
+                     },
+                     "primary":true
+                  }
+               ],
+               "verified":false,
+               "stats":{
+                  "checkinsCount":6656,
+                  "usersCount":4246,
+                  "tipCount":125
+               }
+            }
+         ]
+      }
+   }
+}

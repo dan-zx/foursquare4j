@@ -109,6 +109,18 @@ public class ParserTest {
         assertThat(actualResult.getResponse().getGroups()).isNotNull().isNotEmpty().hasSize(1);
     }
 
+    @Test
+    public void testParseNextVenues() throws Exception {
+        String json = getJsonFrom("responses/nextvenues.json");
+        Result<Group<Venue>> actualResult = Parser.parse(json, "nextVenues", new TypeToken<Group<Venue>>(){});
+
+        assertThat(actualResult).isNotNull();
+        assertThat(actualResult.getMeta()).isNotNull().isEqualTo(okMeta());
+        assertThat(actualResult.getResponse()).isNotNull();
+        assertThat(actualResult.getResponse().getCount()).isNotNull().isEqualTo(5);
+        assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty().hasSize(5);
+    }
+
     private Result.Meta okMeta() {
         Result.Meta meta = new Result.Meta();
         meta.setCode(200);
