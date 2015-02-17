@@ -130,8 +130,7 @@ public class ParserTest {
     private String getJsonFrom(String file) throws Exception {
         Path path = Paths.get(this.getClass().getClassLoader().getResource(file).toURI());
         StringBuilder sb = new StringBuilder();
-        for (String line : Files.readAllLines(path))
-            sb.append(line).append('\n');
+        for (String line : Files.readAllLines(path)) sb.append(line).append('\n');
         return sb.toString();
     }
 }
