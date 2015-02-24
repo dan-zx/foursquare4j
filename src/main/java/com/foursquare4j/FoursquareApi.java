@@ -480,7 +480,7 @@ public class FoursquareApi {
      * @param locale a locale.
      */
     public void setLocale(Locale locale) {
-        this.locale = locale;
+        this.locale = locale == null ? Locale.ENGLISH : locale;
     }
 
     /** Loads the url.properties file. */
