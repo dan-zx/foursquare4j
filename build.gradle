@@ -19,7 +19,6 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.2.0'
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:1.7.0'
-    testCompile 'com.squareup.okhttp:mockwebserver:2.2.0'
     testCompile 'ch.qos.logback:logback-classic:1.1.2'
 }
 
