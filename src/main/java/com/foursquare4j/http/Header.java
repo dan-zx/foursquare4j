@@ -19,6 +19,7 @@ package com.foursquare4j.http;
  * Set of common headers for HTTP.
  * 
  * @author Daniel Pedraza-Arcega.
+ * @since 1.0
  */
 public enum Header {
 
