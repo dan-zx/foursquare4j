@@ -34,14 +34,14 @@ repositories {
 }
 
 dependencies {
-    compile 'com.foursquare4j:foursquare4j:${version}'
+    compile "com.foursquare4j:foursquare4j:${version}"
 }
 ```
 
 ### Usage
 
 ```java
-// Create a new FoursquareApi. 
+// Create a new FoursquareApi
 FoursquareApi foursquareApi = new FoursquareApi("Client ID", "Client Secret");
 
 // Optionally set the authentication access token if you already have one
@@ -50,21 +50,21 @@ foursquareApi.setAccessToken("Access Token");
 
 // Optionally, set the locale for internationalized responses
 // By default, the responses are in English
-foursquareApi.setLocale(new Locale.Builder().setLanguage("es").build());
+foursquareApi.setLocale(new Locale("es"));
 
 // We can make request now.
 Result<User> result = foursquareApi.getUser("self");
 
 if (result.getMeta().getCode() == 200) {
-  // if query was ok we can finally we do something with the data
-  // TODO: Do something with the data
-  System.out.println(result.getResponse());
+    // if query was ok we can finally we do something with the data
+    // TODO: Do something with the data
+    System.out.println(result.getResponse());
 } else {
-  // TODO: Proper error handling
-  System.out.println("Error occured: ");
-  System.out.println("  code: " + result.getMeta().getCode());
-  System.out.println("  type: " + result.getMeta().getErrorType());
-  System.out.println("  detail: " + result.getMeta().getErrorDetail()); 
+    // TODO: Proper error handling
+    System.out.println("Error occured: ");
+    System.out.println("  code: " + result.getMeta().getCode());
+    System.out.println("  type: " + result.getMeta().getErrorType());
+    System.out.println("  detail: " + result.getMeta().getErrorDetail());
 }
 ```
 
@@ -81,10 +81,19 @@ if (result.getMeta().getCode() == 200) {
 * exploreVenues
 * getNextVenues
 
+### Building the Project
+
+Clone this repository and build the project using the Gradle wrapper.
+
+```sh
+$ git clone https://github.com/dan-zx/foursquare4j.git
+$ cd foursquare4j
+$ ./gradlew build
+```
 
 ### License
 
-    Copyright 2014 Daniel Pedraza-Arcega
+    Copyright 2015 Daniel Pedraza-Arcega
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
