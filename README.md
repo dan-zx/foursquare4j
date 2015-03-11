@@ -3,28 +3,35 @@ Foursquare4J
 
 Library created to perform requests to Foursquare API on Java.
 
-### Maven dependency
+Download
+--------
+
+Download [the latest .jar (1.0-SNAPSHOT)](https://dl.dropboxusercontent.com/u/1995295/m2repository/com/foursquare4j/foursquare4j/1.0-SNAPSHOT/foursquare4j-1.0-20150306.183338-1.jar) or via:
+
+### Maven
 
 ```xml
 <repositories>
     <repository>
-      <id>dan_zx-repo</id>
-      <name>Dan ZX Repository</name>
-      <url>https://dl.dropboxusercontent.com/u/1995295/m2repository</url>
+        <id>dan_zx-repo</id>
+        <name>Dan ZX Repository</name>
+        <url>https://dl.dropboxusercontent.com/u/1995295/m2repository</url>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
     </repository>
 </repositories>
 
 <dependencies>
-  <dependency>
-      <groupId>com.foursquare4j</groupId>
-      <artifactId>foursquare4j</artifactId>
-      <version>${version}</version>
+    <dependency>
+        <groupId>com.foursquare4j</groupId>
+        <artifactId>foursquare4j</artifactId>
+        <version>${version}</version>
     </dependency>
 </dependencies>
 ```
 
-### Gradle dependency
-
+### Gradle
 
 ```groovy
 repositories {
@@ -38,7 +45,8 @@ dependencies {
 }
 ```
 
-### Usage
+Usage
+-----
 
 ```java
 // Create a new FoursquareApi
@@ -68,7 +76,8 @@ if (result.getMeta().getCode() == 200) {
 }
 ```
 
-### Methods implemented
+Methods implemented
+-------------------
 
 * getAccessToken (in server app with native auth)
 * getUser
@@ -81,7 +90,8 @@ if (result.getMeta().getCode() == 200) {
 * exploreVenues
 * getNextVenues
 
-### Building the Project
+Building the Project
+--------------------
 
 Clone this repository and build the project using the Gradle wrapper.
 
@@ -91,7 +101,8 @@ $ cd foursquare4j
 $ ./gradlew build
 ```
 
-### License
+License
+-------
 
     Copyright 2015 Daniel Pedraza-Arcega
 
