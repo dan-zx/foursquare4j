@@ -18,14 +18,30 @@ dependencies {
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'com.squareup.okhttp:okhttp:2.2.0'
     testCompile 'junit:junit:4.12'
-    testCompile 'org.assertj:assertj-core:1.7.1'
+    testCompile 'org.assertj:assertj-core:2.0.0'
     testCompile 'ch.qos.logback:logback-classic:1.1.2'
 }
 
+task jarWithDependencies(type: Jar) {
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+artifacts {
+    archives jarWithDependencies
+}
+
 uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: "file:///home/daniel/Dropbox/Public/m2repository/")
+    repositories.mavenDeployer {
+        repository(url: "file://${System.properties['user.home']}/Dropbox/Public/m2repository/")
+        addFilter('core') { artifact, file ->
+            artifact.name == project.name
+        }
+        addFilter('all') { artifact, file ->
+            artifact.name == project.name + '-all'
+        }
+        pom('all').whenConfigured { pom ->
+            pom.dependencies = pom.dependencies.minus(pom.dependencies.findAll { dep -> dep.scope == 'compile' })
         }
     }
 }
