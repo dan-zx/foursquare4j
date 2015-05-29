@@ -27,7 +27,6 @@ import org.slf4j.LoggerFactory;
 
 import com.foursquare4j.http.ContentType;
 import com.foursquare4j.http.Header;
-import com.foursquare4j.http.UriBuilder;
 import com.foursquare4j.response.AccessTokenResponse;
 import com.foursquare4j.response.Category;
 import com.foursquare4j.response.ExploreVenueGroups;
@@ -40,6 +39,7 @@ import com.foursquare4j.response.Venue;
 
 import com.google.gson.reflect.TypeToken;
 
+import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -84,11 +84,11 @@ public class FoursquareApi {
      * @return a AccessTokenResponse.
      */
     public AccessTokenResponse getAccessToken(String authorizationCode) {
-        String url = new UriBuilder(getString("foursquare.auth.url"))
-                .addParameter("client_id", clientId)
-                .addParameter("client_secret", clientSecret)
-                .addParameter("grant_type", "authorization_code")
-                .addParameter("code", authorizationCode)
+        String url = HttpUrl.parse(getString("foursquare.auth.url")).newBuilder()
+                .addQueryParameter("client_id", clientId)
+                .addQueryParameter("client_secret", clientSecret)
+                .addQueryParameter("grant_type", "authorization_code")
+                .addQueryParameter("code", authorizationCode)
                 .toString();
         String json = newRequest(url);
         LOGGER.debug("Response ---> {}", json);
@@ -105,8 +105,8 @@ public class FoursquareApi {
      * @return a User object wrapped in a Result object.
      */
     public Result<User> getUser(String userId) {
-        String url = newApiUriBuilder()
-                .path(getString("foursquare.api.path.users", userId))
+        String url = newApiUrlBuilder()
+                .encodedPath(getString("foursquare.api.path.users", userId))
                 .toString();
         String json = newRequest(url);
         LOGGER.debug("Response ---> {}", json);
@@ -123,11 +123,11 @@ public class FoursquareApi {
      * @return a Group of Users wrapped in a Result object.
      */
     public Result<Group<User>> getUserFriends(String userId, Integer limit, Integer offset) {
-        UriBuilder uriBuilder = newApiUriBuilder()
-                .path(getString("foursquare.api.path.friends", userId));
-        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
-        if (offset != null) uriBuilder.addParameter("offset", String.valueOf(offset));
-        String json = newRequest(uriBuilder.toString());
+        HttpUrl.Builder urlBuilder = newApiUrlBuilder()
+                .encodedPath(getString("foursquare.api.path.friends", userId));
+        if (limit != null) urlBuilder.addQueryParameter("limit", String.valueOf(limit));
+        if (offset != null) urlBuilder.addQueryParameter("offset", String.valueOf(offset));
+        String json = newRequest(urlBuilder.toString());
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, "friends", new TypeToken<Group<User>>(){});
     }
@@ -149,14 +149,14 @@ public class FoursquareApi {
      */
     public Result<List> getUserTips(String userId, Integer limit, Integer offset, 
             String llBounds, String categoryId, String sort) {
-        UriBuilder uriBuilder = newApiUriBuilder()
-                .path(getString("foursquare.api.path.tips", userId));
-        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
-        if (offset != null) uriBuilder.addParameter("offset", String.valueOf(offset));
-        if (llBounds != null) uriBuilder.addParameter("llBounds", llBounds);
-        if (categoryId != null) uriBuilder.addParameter("categoryId", categoryId);
-        if (sort != null) uriBuilder.addParameter("sort", sort);
-        String json = newRequest(uriBuilder.toString());
+        HttpUrl.Builder urlBuilder = newApiUrlBuilder()
+                .encodedPath(getString("foursquare.api.path.tips", userId));
+        if (limit != null) urlBuilder.addQueryParameter("limit", String.valueOf(limit));
+        if (offset != null) urlBuilder.addQueryParameter("offset", String.valueOf(offset));
+        if (llBounds != null) urlBuilder.addQueryParameter("llBounds", llBounds);
+        if (categoryId != null) urlBuilder.addQueryParameter("categoryId", categoryId);
+        if (sort != null) urlBuilder.addQueryParameter("sort", sort);
+        String json = newRequest(urlBuilder.toString());
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, "list", List.class);
     }
@@ -175,14 +175,14 @@ public class FoursquareApi {
      */
     public Result<Group<Venue>> getUserVenueLikes(String userId, Long beforeTimestamp, 
             Long afterTimestamp, String categoryId, Integer limit, Integer offset) {
-        UriBuilder uriBuilder = newApiUriBuilder()
-                .path(getString("foursquare.api.path.venue_likes", userId));
-        if (beforeTimestamp != null) uriBuilder.addParameter("beforeTimestamp", String.valueOf(beforeTimestamp));
-        if (afterTimestamp != null) uriBuilder.addParameter("afterTimestamp", String.valueOf(afterTimestamp));
-        if (categoryId != null) uriBuilder.addParameter("categoryId", categoryId);
-        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
-        if (offset != null) uriBuilder.addParameter("offset", String.valueOf(offset));
-        String json = newRequest(uriBuilder.toString());
+        HttpUrl.Builder urlBuilder = newApiUrlBuilder()
+                .encodedPath(getString("foursquare.api.path.venue_likes", userId));
+        if (beforeTimestamp != null) urlBuilder.addQueryParameter("beforeTimestamp", String.valueOf(beforeTimestamp));
+        if (afterTimestamp != null) urlBuilder.addQueryParameter("afterTimestamp", String.valueOf(afterTimestamp));
+        if (categoryId != null) urlBuilder.addQueryParameter("categoryId", categoryId);
+        if (limit != null) urlBuilder.addQueryParameter("limit", String.valueOf(limit));
+        if (offset != null) urlBuilder.addQueryParameter("offset", String.valueOf(offset));
+        String json = newRequest(urlBuilder.toString());
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, "venues", new TypeToken<Group<Venue>>(){});
     }
@@ -197,8 +197,8 @@ public class FoursquareApi {
      * @return a Venue object wrapped in a Result object.
      */
     public Result<Venue> getVenue(String venueId) {
-        String url = newApiUriBuilder()
-                .path(getString("foursquare.api.path.venues", venueId))
+        String url = newApiUrlBuilder()
+                .encodedPath(getString("foursquare.api.path.venues", venueId))
                 .toString();
         String json = newRequest(url);
         LOGGER.debug("Response ---> {}", json);
@@ -213,8 +213,8 @@ public class FoursquareApi {
      * @return an array of Category objects wrapped in a Result object.
      */
     public Result<Category[]> getVenueCategories() {
-        String url = newApiUriBuilder()
-                .path(getString("foursquare.api.path.venue_categories"))
+        String url = newApiUrlBuilder()
+                .encodedPath(getString("foursquare.api.path.venue_categories"))
                 .toString();
         String json = newRequest(url);
         LOGGER.debug("Response ---> {}", json);
@@ -319,24 +319,24 @@ public class FoursquareApi {
     public Result<Venue[]> searchVenues(String ll, String near, Double llAcc, Integer alt, 
             Double altAcc, String query, Integer limit, String intent, Integer radius, String sw, 
             String ne, String categoryId, String url, String providerId, String linkedId) {
-        UriBuilder uriBuilder = newApiUriBuilder()
-                .path(getString("foursquare.api.path.search_venues"));
-        if (ll != null) uriBuilder.addParameter("ll", ll);
-        if (near != null) uriBuilder.addParameter("near", near);
-        if (llAcc != null) uriBuilder.addParameter("llAcc", String.valueOf(llAcc));
-        if (alt != null) uriBuilder.addParameter("alt", String.valueOf(alt));
-        if (altAcc != null) uriBuilder.addParameter("altAcc", String.valueOf(altAcc));
-        if (query != null) uriBuilder.addParameter("query", query);
-        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
-        if (intent != null) uriBuilder.addParameter("intent", intent);
-        if (radius != null) uriBuilder.addParameter("radius", String.valueOf(radius));
-        if (sw != null) uriBuilder.addParameter("sw", sw);
-        if (ne != null) uriBuilder.addParameter("ne", ne);
-        if (categoryId != null) uriBuilder.addParameter("categoryId", categoryId);
-        if (url != null) uriBuilder.addParameter("url", url);
-        if (providerId != null) uriBuilder.addParameter("providerId", providerId);
-        if (linkedId != null) uriBuilder.addParameter("linkedId", linkedId);
-        String json = newRequest(uriBuilder.toString());
+        HttpUrl.Builder urlBuilder = newApiUrlBuilder()
+                .encodedPath(getString("foursquare.api.path.search_venues"));
+        if (ll != null) urlBuilder.addQueryParameter("ll", ll);
+        if (near != null) urlBuilder.addQueryParameter("near", near);
+        if (llAcc != null) urlBuilder.addQueryParameter("llAcc", String.valueOf(llAcc));
+        if (alt != null) urlBuilder.addQueryParameter("alt", String.valueOf(alt));
+        if (altAcc != null) urlBuilder.addQueryParameter("altAcc", String.valueOf(altAcc));
+        if (query != null) urlBuilder.addQueryParameter("query", query);
+        if (limit != null) urlBuilder.addQueryParameter("limit", String.valueOf(limit));
+        if (intent != null) urlBuilder.addQueryParameter("intent", intent);
+        if (radius != null) urlBuilder.addQueryParameter("radius", String.valueOf(radius));
+        if (sw != null) urlBuilder.addQueryParameter("sw", sw);
+        if (ne != null) urlBuilder.addQueryParameter("ne", ne);
+        if (categoryId != null) urlBuilder.addQueryParameter("categoryId", categoryId);
+        if (url != null) urlBuilder.addQueryParameter("url", url);
+        if (providerId != null) urlBuilder.addQueryParameter("providerId", providerId);
+        if (linkedId != null) urlBuilder.addQueryParameter("linkedId", linkedId);
+        String json = newRequest(urlBuilder.toString());
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, "venues", Venue[].class);
     }
@@ -399,30 +399,30 @@ public class FoursquareApi {
             Integer offset, String novelty, String friendVisits, String time, String day, 
             Boolean venuePhotos, String lastVenue, Boolean openNow, Boolean sortByDistance, 
             Double price, Boolean saved, Boolean specials) {
-        UriBuilder uriBuilder = newApiUriBuilder()
-                .path(getString("foursquare.api.path.explore_venues"));
-        if (ll != null) uriBuilder.addParameter("ll", ll);
-        if (near != null) uriBuilder.addParameter("near", near);
-        if (llAcc != null) uriBuilder.addParameter("llAcc", String.valueOf(llAcc));
-        if (alt != null) uriBuilder.addParameter("alt", String.valueOf(alt));
-        if (altAcc != null) uriBuilder.addParameter("altAcc", String.valueOf(altAcc));
-        if (radius != null) uriBuilder.addParameter("radius", String.valueOf(radius));
-        if (section != null) uriBuilder.addParameter("section", section);
-        if (query != null) uriBuilder.addParameter("query", query);
-        if (limit != null) uriBuilder.addParameter("limit", String.valueOf(limit));
-        if (offset != null) uriBuilder.addParameter("offset", String.valueOf(offset));
-        if (novelty != null) uriBuilder.addParameter("novelty", novelty);
-        if (friendVisits != null) uriBuilder.addParameter("friendVisits", novelty);
-        if (time != null) uriBuilder.addParameter("time", time);
-        if (day != null) uriBuilder.addParameter("day", day);
-        if (venuePhotos != null) uriBuilder.addParameter("venuePhotos", String.valueOf(venuePhotos ? 1 : 0));
-        if (lastVenue != null) uriBuilder.addParameter("lastVenue", lastVenue);
-        if (openNow != null) uriBuilder.addParameter("openNow", String.valueOf(openNow ? 1 : 0));
-        if (sortByDistance != null) uriBuilder.addParameter("sortByDistance", String.valueOf(sortByDistance ? 1 : 0));
-        if (price != null) uriBuilder.addParameter("price", String.valueOf(price));
-        if (saved != null) uriBuilder.addParameter("saved", String.valueOf(saved ? 1 : 0));
-        if (specials != null) uriBuilder.addParameter("specials", String.valueOf(specials ? 1 : 0));
-        String json = newRequest(uriBuilder.toString());
+        HttpUrl.Builder urlBuilder = newApiUrlBuilder()
+                .encodedPath(getString("foursquare.api.path.explore_venues"));
+        if (ll != null) urlBuilder.addQueryParameter("ll", ll);
+        if (near != null) urlBuilder.addQueryParameter("near", near);
+        if (llAcc != null) urlBuilder.addQueryParameter("llAcc", String.valueOf(llAcc));
+        if (alt != null) urlBuilder.addQueryParameter("alt", String.valueOf(alt));
+        if (altAcc != null) urlBuilder.addQueryParameter("altAcc", String.valueOf(altAcc));
+        if (radius != null) urlBuilder.addQueryParameter("radius", String.valueOf(radius));
+        if (section != null) urlBuilder.addQueryParameter("section", section);
+        if (query != null) urlBuilder.addQueryParameter("query", query);
+        if (limit != null) urlBuilder.addQueryParameter("limit", String.valueOf(limit));
+        if (offset != null) urlBuilder.addQueryParameter("offset", String.valueOf(offset));
+        if (novelty != null) urlBuilder.addQueryParameter("novelty", novelty);
+        if (friendVisits != null) urlBuilder.addQueryParameter("friendVisits", novelty);
+        if (time != null) urlBuilder.addQueryParameter("time", time);
+        if (day != null) urlBuilder.addQueryParameter("day", day);
+        if (venuePhotos != null) urlBuilder.addQueryParameter("venuePhotos", String.valueOf(venuePhotos ? 1 : 0));
+        if (lastVenue != null) urlBuilder.addQueryParameter("lastVenue", lastVenue);
+        if (openNow != null) urlBuilder.addQueryParameter("openNow", String.valueOf(openNow ? 1 : 0));
+        if (sortByDistance != null) urlBuilder.addQueryParameter("sortByDistance", String.valueOf(sortByDistance ? 1 : 0));
+        if (price != null) urlBuilder.addQueryParameter("price", String.valueOf(price));
+        if (saved != null) urlBuilder.addQueryParameter("saved", String.valueOf(saved ? 1 : 0));
+        if (specials != null) urlBuilder.addQueryParameter("specials", String.valueOf(specials ? 1 : 0));
+        String json = newRequest(urlBuilder.toString());
         LOGGER.debug("Response ---> {}", json);
         return Parser.parse(json, ExploreVenueGroups.class);
     }
@@ -436,8 +436,8 @@ public class FoursquareApi {
      * @return Compact venues.
      */
     public Result<Group<Venue>> getNextVenues(String venueId) {
-        String url = newApiUriBuilder()
-                .path(getString("foursquare.api.path.next_venues", venueId))
+        String url = newApiUrlBuilder()
+                .encodedPath(getString("foursquare.api.path.next_venues", venueId))
                 .toString();
         String json = newRequest(url);
         LOGGER.debug("Response ---> {}", json);
@@ -494,19 +494,19 @@ public class FoursquareApi {
     }
 
     /**
-     * Builds a new URIBuilder preinitialized with the Foursquare API url parameters.
+     * Builds a new HttpUrl.Builder preinitialized with the Foursquare API url parameters.
      * 
-     * @return a new URIBuilder.
+     * @return a new HttpUrl.Builder.
      */
-    private UriBuilder newApiUriBuilder() {
-        UriBuilder uriBuilder = new UriBuilder(getString("foursquare.api.url"))
-                .addParameter("v", VERSION);
-        if (accessToken != null) uriBuilder.addParameter("oauth_token", accessToken);
+    private HttpUrl.Builder newApiUrlBuilder() {
+        HttpUrl.Builder urlBuilder = HttpUrl.parse(getString("foursquare.api.url")).newBuilder()
+                .addQueryParameter("v", VERSION);
+        if (accessToken != null) urlBuilder.addQueryParameter("oauth_token", accessToken);
         else {
-            uriBuilder.addParameter("client_id", clientId)
-                .addParameter("client_secret", clientSecret);
+            urlBuilder.addQueryParameter("client_id", clientId)
+                .addQueryParameter("client_secret", clientSecret);
         }
-        return uriBuilder;
+        return urlBuilder;
     }
 
     /**
@@ -517,6 +517,7 @@ public class FoursquareApi {
      * @throws RuntimeException when conection errors occur.
      */
     private String newRequest(String url) {
+        LOGGER.debug("{}", url);
         Request request = new Request.Builder().url(url)
             .header(Header.ACCEPT.getValue(), ContentType.APPLICATION_JSON.getMimeType())
             .header(Header.ACCEPT_LANGUAGE.getValue(), locale.getLanguage())
