@@ -6,7 +6,7 @@ Library created to perform requests to Foursquare API on Java.
 Download
 --------
 
-Download [the latest .jar with dependencies (1.0-SNAPSHOT)](https://dl.dropboxusercontent.com/u/1995295/m2repository/com/foursquare4j/foursquare4j-all/1.0-SNAPSHOT/foursquare4j-all-1.0-20150312.030426-1.jar) or via:
+Download [the latest .jar with dependencies (1.0-SNAPSHOT)](https://dl.dropboxusercontent.com/u/1995295/m2repository/com/foursquare4j/foursquare4j-all/1.0-SNAPSHOT/foursquare4j-all-1.0-20150602.200959-1.jar) or via:
 
 ### Maven
 
