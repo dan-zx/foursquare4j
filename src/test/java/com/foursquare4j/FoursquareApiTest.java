@@ -29,18 +29,18 @@ import com.foursquare4j.response.Result;
 import com.foursquare4j.response.User;
 import com.foursquare4j.response.Venue;
 
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class FoursquareApiTest {
 
-    private FoursquareApi foursquareApi;
+    private static FoursquareApi foursquareApi;
+    private static Properties configs;
 
-    @Before
-    public void setUp() throws Exception {
-        Properties configs = loadConfigProperties();
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+        configs = loadConfigProperties();
         foursquareApi = new FoursquareApi(configs.getProperty("foursquare.app.client_id"), configs.getProperty("foursquare.app.client_secret"));
-        foursquareApi.setAccessToken(configs.getProperty("foursquare.app.access_token"));
     }
     
     @Test
@@ -55,8 +55,10 @@ public class FoursquareApiTest {
 
     @Test
     public void testGetUserFriends() throws Exception {
+        foursquareApi.setAccessToken(configs.getProperty("foursquare.app.access_token"));
         Result<Group<User>> actualResult = foursquareApi.getUserFriends("self", null, null);
-        
+        foursquareApi.setAccessToken(null);
+
         assertThat(actualResult).isNotNull();
         assertThat(actualResult.getMeta()).isNotNull();
         assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
@@ -67,7 +69,9 @@ public class FoursquareApiTest {
 
     @Test
     public void testGetUserTips() throws Exception {
+        foursquareApi.setAccessToken(configs.getProperty("foursquare.app.access_token"));
         Result<List> actualResult = foursquareApi.getUserTips("self", null, null, null, null, null);
+        foursquareApi.setAccessToken(null);
 
         assertThat(actualResult).isNotNull();
         assertThat(actualResult.getMeta()).isNotNull();
@@ -79,8 +83,10 @@ public class FoursquareApiTest {
 
     @Test
     public void testGetUserVenueLikes() throws Exception {
+        foursquareApi.setAccessToken(configs.getProperty("foursquare.app.access_token"));
         Result<Group<Venue>> actualResult = foursquareApi.getUserVenueLikes("57562206", null, null, null, null, null);
-        
+        foursquareApi.setAccessToken(null);
+
         assertThat(actualResult).isNotNull();
         assertThat(actualResult.getMeta()).isNotNull();
         assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
@@ -134,7 +140,7 @@ public class FoursquareApiTest {
     @Test 
     public void testGetNextVenues() throws Exception {
         Result<Group<Venue>> actualResult = foursquareApi.getNextVenues("4b9d70a1f964a520e2ac36e3");
-        
+
         assertThat(actualResult).isNotNull();
         assertThat(actualResult.getMeta()).isNotNull();
         assertThat(actualResult.getMeta().getCode()).isNotNull().isEqualTo(200);
@@ -143,19 +149,11 @@ public class FoursquareApiTest {
         assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty();
     }
 
-    private Properties loadConfigProperties() {
-        Properties configs = new Properties();
-        InputStream stream = null;
-        try {
-            stream = this.getClass().getResourceAsStream("/fsq-configs.properties");
+    private static Properties loadConfigProperties() throws IOException {
+        try (InputStream stream = FoursquareApiTest.class.getResourceAsStream("/fsq-configs.properties")) {
+            Properties configs = new Properties();
             configs.load(stream);
             return configs;
-        } catch (IOException ex) { 
-            return null;
-        } finally {
-            try {
-                stream.close();
-            } catch (IOException ex) { }
         }
     }
 }
