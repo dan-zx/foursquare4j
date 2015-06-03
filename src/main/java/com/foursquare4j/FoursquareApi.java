@@ -16,11 +16,8 @@
 package com.foursquare4j;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.text.MessageFormat;
 import java.util.Locale;
-import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,12 +52,10 @@ public class FoursquareApi {
     private static final Logger LOGGER = LoggerFactory.getLogger(FoursquareApi.class);
     private static final String VERSION = "20150208";
 
-    private final String clientId;
-    private final String clientSecret;
-
+    private String clientId;
+    private String clientSecret;
     private String accessToken;
     private Locale locale;
-    private Properties urls;
     private OkHttpClient client;
 
     /**
@@ -70,11 +65,12 @@ public class FoursquareApi {
      * @param clientSecret your Foursquare client secret.
      */
     public FoursquareApi(String clientId, String clientSecret) {
+        if (clientId == null) throw new IllegalArgumentException("clientId == null");
+        if (clientSecret == null) throw new IllegalArgumentException("clientSecret == null");
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         locale = Locale.ENGLISH;
         client = new OkHttpClient();
-        loadUrlsFile();
     }
 
     /**
@@ -84,7 +80,7 @@ public class FoursquareApi {
      * @return a AccessTokenResponse.
      */
     public AccessTokenResponse getAccessToken(String authorizationCode) {
-        String url = HttpUrl.parse(getString("foursquare.auth.url")).newBuilder()
+        String url = HttpUrl.parse(authUrl()).newBuilder()
                 .addQueryParameter("client_id", clientId)
                 .addQueryParameter("client_secret", clientSecret)
                 .addQueryParameter("grant_type", "authorization_code")
@@ -106,7 +102,8 @@ public class FoursquareApi {
      */
     public Result<User> getUser(String userId) {
         String url = newApiUrlBuilder()
-                .encodedPath(getString("foursquare.api.path.users", userId))
+                .addEncodedPathSegment("users")
+                .addPathSegment(userId)
                 .toString();
         String json = newRequest(url);
         LOGGER.debug("Response ---> {}", json);
@@ -124,7 +121,9 @@ public class FoursquareApi {
      */
     public Result<Group<User>> getUserFriends(String userId, Integer limit, Integer offset) {
         HttpUrl.Builder urlBuilder = newApiUrlBuilder()
-                .encodedPath(getString("foursquare.api.path.friends", userId));
+                .addEncodedPathSegment("users")
+                .addPathSegment(userId)
+                .addEncodedPathSegment("friends");
         if (limit != null) urlBuilder.addQueryParameter("limit", String.valueOf(limit));
         if (offset != null) urlBuilder.addQueryParameter("offset", String.valueOf(offset));
         String json = newRequest(urlBuilder.toString());
@@ -150,7 +149,9 @@ public class FoursquareApi {
     public Result<List> getUserTips(String userId, Integer limit, Integer offset, 
             String llBounds, String categoryId, String sort) {
         HttpUrl.Builder urlBuilder = newApiUrlBuilder()
-                .encodedPath(getString("foursquare.api.path.tips", userId));
+                .addEncodedPathSegment("lists")
+                .addPathSegment(userId)
+                .addEncodedPathSegment("tips");
         if (limit != null) urlBuilder.addQueryParameter("limit", String.valueOf(limit));
         if (offset != null) urlBuilder.addQueryParameter("offset", String.valueOf(offset));
         if (llBounds != null) urlBuilder.addQueryParameter("llBounds", llBounds);
@@ -176,7 +177,9 @@ public class FoursquareApi {
     public Result<Group<Venue>> getUserVenueLikes(String userId, Long beforeTimestamp, 
             Long afterTimestamp, String categoryId, Integer limit, Integer offset) {
         HttpUrl.Builder urlBuilder = newApiUrlBuilder()
-                .encodedPath(getString("foursquare.api.path.venue_likes", userId));
+                .addEncodedPathSegment("users")
+                .addPathSegment(userId)
+                .addEncodedPathSegment("venuelikes");
         if (beforeTimestamp != null) urlBuilder.addQueryParameter("beforeTimestamp", String.valueOf(beforeTimestamp));
         if (afterTimestamp != null) urlBuilder.addQueryParameter("afterTimestamp", String.valueOf(afterTimestamp));
         if (categoryId != null) urlBuilder.addQueryParameter("categoryId", categoryId);
@@ -198,7 +201,8 @@ public class FoursquareApi {
      */
     public Result<Venue> getVenue(String venueId) {
         String url = newApiUrlBuilder()
-                .encodedPath(getString("foursquare.api.path.venues", venueId))
+                .addEncodedPathSegment("venues")
+                .addPathSegment(venueId)
                 .toString();
         String json = newRequest(url);
         LOGGER.debug("Response ---> {}", json);
@@ -214,7 +218,8 @@ public class FoursquareApi {
      */
     public Result<Category[]> getVenueCategories() {
         String url = newApiUrlBuilder()
-                .encodedPath(getString("foursquare.api.path.venue_categories"))
+                .addEncodedPathSegment("venues")
+                .addEncodedPathSegment("categories")
                 .toString();
         String json = newRequest(url);
         LOGGER.debug("Response ---> {}", json);
@@ -320,7 +325,8 @@ public class FoursquareApi {
             Double altAcc, String query, Integer limit, String intent, Integer radius, String sw, 
             String ne, String categoryId, String url, String providerId, String linkedId) {
         HttpUrl.Builder urlBuilder = newApiUrlBuilder()
-                .encodedPath(getString("foursquare.api.path.search_venues"));
+                .addEncodedPathSegment("venues")
+                .addEncodedPathSegment("search");
         if (ll != null) urlBuilder.addQueryParameter("ll", ll);
         if (near != null) urlBuilder.addQueryParameter("near", near);
         if (llAcc != null) urlBuilder.addQueryParameter("llAcc", String.valueOf(llAcc));
@@ -400,7 +406,8 @@ public class FoursquareApi {
             Boolean venuePhotos, String lastVenue, Boolean openNow, Boolean sortByDistance, 
             Double price, Boolean saved, Boolean specials) {
         HttpUrl.Builder urlBuilder = newApiUrlBuilder()
-                .encodedPath(getString("foursquare.api.path.explore_venues"));
+                .addEncodedPathSegment("venues")
+                .addEncodedPathSegment("explore");
         if (ll != null) urlBuilder.addQueryParameter("ll", ll);
         if (near != null) urlBuilder.addQueryParameter("near", near);
         if (llAcc != null) urlBuilder.addQueryParameter("llAcc", String.valueOf(llAcc));
@@ -437,7 +444,9 @@ public class FoursquareApi {
      */
     public Result<Group<Venue>> getNextVenues(String venueId) {
         String url = newApiUrlBuilder()
-                .encodedPath(getString("foursquare.api.path.next_venues", venueId))
+                .addEncodedPathSegment("venues")
+                .addPathSegment(venueId)
+                .addEncodedPathSegment("nextvenues")
                 .toString();
         String json = newRequest(url);
         LOGGER.debug("Response ---> {}", json);
@@ -465,41 +474,13 @@ public class FoursquareApi {
         this.locale = locale == null ? Locale.ENGLISH : locale;
     }
 
-    /** Loads the url.properties file. */
-    private void loadUrlsFile() {
-        urls = new Properties();
-        InputStream stream = null;
-        try {
-            stream = this.getClass().getResourceAsStream("/com/foursquare4j/urls.properties");
-            urls.load(stream);
-        } catch (IOException ex) {
-            LOGGER.error("Couldn't load urls file", ex);
-        } finally {
-            try {
-                stream.close();
-            } catch (IOException ex) { }
-        }
-    }
-
-    /**
-     * Gets a string, optionally formatted, from the url.properties file.
-     * 
-     * @param key the string key.
-     * @param params the format parameters.
-     * @return a string from the url.properties file.
-     */
-    private String getString(String key, Object... params) {
-        if (params.length > 0) return MessageFormat.format(urls.getProperty(key), params);
-        else return urls.getProperty(key);
-    }
-
     /**
      * Builds a new HttpUrl.Builder preinitialized with the Foursquare API url parameters.
      * 
      * @return a new HttpUrl.Builder.
      */
     private HttpUrl.Builder newApiUrlBuilder() {
-        HttpUrl.Builder urlBuilder = HttpUrl.parse(getString("foursquare.api.url")).newBuilder()
+        HttpUrl.Builder urlBuilder = HttpUrl.parse(apiUrl()).newBuilder()
                 .addQueryParameter("v", VERSION);
         if (accessToken != null) urlBuilder.addQueryParameter("oauth_token", accessToken);
         else {
@@ -530,5 +511,15 @@ public class FoursquareApi {
             LOGGER.error("Error while making request", ex);
             throw new RuntimeException(ex);
         }
+    }
+
+    /** @return Foursquare authentication URL. Useful for mock responses. */
+    public String authUrl() {
+        return "https://foursquare.com/oauth2/access_token";
+    }
+
+    /** @return Foursquare API URL. Useful for mock responses. */
+    public String apiUrl() {
+        return "https://api.foursquare.com/v2";
     }
 }
