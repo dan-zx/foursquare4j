@@ -1,0 +1,897 @@
+{
+   "meta":{
+      "code":200
+   },
+   "notifications":[
+      {
+         "type":"notificationTray",
+         "item":{
+            "unreadCount":0
+         }
+      }
+   ],
+   "response":{
+      "categories":[
+         {
+            "id":"4d4b7104d754a06370d81259",
+            "name":"Arte y entretenimiento",
+            "pluralName":"Arte y entretenimiento",
+            "shortName":"Arte y entretenimiento",
+            "icon":{
+               "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/default_",
+               "suffix":".png"
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d17f941735",
+                  "name":"Cine",
+                  "pluralName":"Cines",
+                  "shortName":"Cine",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/movietheater_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+                     {
+                        "id":"4bf58dd8d48988d17e941735",
+                        "name":"Cine independiente",
+                        "pluralName":"Cines independientes",
+                        "shortName":"Teatro independiente",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/movietheater_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d180941735",
+                        "name":"Multicine",
+                        "pluralName":"Multicines",
+                        "shortName":"Multicine",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/movietheater_",
+                           "suffix":".png"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d181941735",
+                  "name":"Museo",
+                  "pluralName":"Museos",
+                  "shortName":"Museo",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/museum_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+                     {
+                        "id":"4bf58dd8d48988d18f941735",
+                        "name":"Museo de arte",
+                        "pluralName":"Museos de arte",
+                        "shortName":"Museo de arte",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/museum_art_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d190941735",
+                        "name":"Museo histórico",
+                        "pluralName":"Museo de historia",
+                        "shortName":"Museo histórico",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/museum_history_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d192941735",
+                        "name":"Planetario",
+                        "pluralName":"Planetarios",
+                        "shortName":"Planetario",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/museum_planetarium_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d191941735",
+                        "name":"Museo de Ciencias",
+                        "pluralName":"Museos de Ciencias",
+                        "shortName":"Museo de Ciencias",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/museum_science_",
+                           "suffix":".png"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1e5931735",
+                  "name":"Lugar de música",
+                  "pluralName":"Lugares de música",
+                  "shortName":"Lugar de música",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/musicvenue_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+                     {
+                        "id":"4bf58dd8d48988d1e7931735",
+                        "name":"Club de jazz",
+                        "pluralName":"Clubes de Jazz",
+                        "shortName":"Club de jazz",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/musicvenue_jazzclub_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d1e8931735",
+                        "name":"Piano Bar",
+                        "pluralName":"Piano Bars",
+                        "shortName":"Piano Bar",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/musicvenue_pianobar_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d1e9931735",
+                        "name":"Club de rock",
+                        "pluralName":"Clubes de rock",
+                        "shortName":"Club de rock",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/musicvenue_rockclub_",
+                           "suffix":".png"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "id":"52e81612bcbc57f1066b79ed",
+                  "name":"Escultura al aire libre",
+                  "pluralName":"Esculturas al aire libre",
+                  "shortName":"Escultura al aire libre",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/sculpture_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1f2931735",
+                  "name":"Lugar de artes interpretativas",
+                  "pluralName":"Lugares de artes interpretativas",
+                  "shortName":"Artes interpretativas",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/performingarts_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+                     {
+                        "id":"4bf58dd8d48988d134941735",
+                        "name":"Academia de baile",
+                        "pluralName":"Estudios de baile",
+                        "shortName":"Academia de baile",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/performingarts_dancestudio_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d135941735",
+                        "name":"Teatro independiente",
+                        "pluralName":"Teatros independientes",
+                        "shortName":"Independiente",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/performingarts_indieoffbroadway_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d136941735",
+                        "name":"Teatro de ópera",
+                        "pluralName":"Teatros de ópera",
+                        "shortName":"Teatro de ópera",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/performingarts_operahouse_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d137941735",
+                        "name":"Teatro",
+                        "pluralName":"Teatros",
+                        "shortName":"Teatro",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/performingarts_theater_",
+                           "suffix":".png"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1e3931735",
+                  "name":"Sala de pool",
+                  "pluralName":"Salas de pool",
+                  "shortName":"Billar",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/billiards_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"507c8c4091d498d9fc8c67a9",
+                  "name":"Arte público",
+                  "pluralName":"Arte público",
+                  "shortName":"Arte público",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/default_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1f4931735",
+                  "name":"Circuito",
+                  "pluralName":"Pistas de carreras",
+                  "shortName":"Circuito",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/racetrack_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"52e81612bcbc57f1066b79e9",
+                  "name":"Pista de patinaje sobre ruedas",
+                  "pluralName":"Pistas de patinaje sobre ruedas",
+                  "shortName":"Pista de patinaje sobre ruedas",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/default_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"52e81612bcbc57f1066b79ec",
+                  "name":"Club de salsa",
+                  "pluralName":"Clubes de salsa",
+                  "shortName":"Club de salsa",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/performingarts_dancestudio_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d184941735",
+                  "name":"Estadio",
+                  "pluralName":"Estadios",
+                  "shortName":"Estadio",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+                     {
+                        "id":"4bf58dd8d48988d18c941735",
+                        "name":"Estadio de béisbol",
+                        "pluralName":"Estadios de béisbol",
+                        "shortName":"Béisbol",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_baseball_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d18b941735",
+                        "name":"Estadio de baloncesto",
+                        "pluralName":"Estadios de baloncesto",
+                        "shortName":"Baloncesto",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_basketball_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d18a941735",
+                        "name":"Cancha de críquet",
+                        "pluralName":"Canchas de críquet",
+                        "shortName":"Críquet",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_cricket_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d189941735",
+                        "name":"Estadio de fútbol",
+                        "pluralName":"Estadios de fútbol",
+                        "shortName":"Fútbol",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_football_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d185941735",
+                        "name":"Estadio de hockey",
+                        "pluralName":"Estadios de hockey",
+                        "shortName":"Hockey",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_hockey_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d188941735",
+                        "name":"Estadio de fútbol",
+                        "pluralName":"Estadios de fútbol",
+                        "shortName":"Fútbol",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_soccer_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4e39a891bd410d7aed40cbc2",
+                        "name":"Tenis",
+                        "pluralName":"Estadios de tenis",
+                        "shortName":"Tenis",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_tennis_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d187941735",
+                        "name":"Estadio de atletismo",
+                        "pluralName":"Estadios de atletismo",
+                        "shortName":"Atletismo",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_track_",
+                           "suffix":".png"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "id":"52e81612bcbc57f1066b79ee",
+                  "name":"Arte callejero",
+                  "pluralName":"Puestos de arte callejero",
+                  "shortName":"Arte callejero",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/default_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d182941735",
+                  "name":"Parque temático",
+                  "pluralName":"Parques temáticos",
+                  "shortName":"Parque temático",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/themepark_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+                     {
+                        "id":"5109983191d435c0d71c2bb1",
+                        "name":"Juego\/atracción en parque temático",
+                        "pluralName":"Juegos\/atracciones en parques temáticos",
+                        "shortName":"Parque temático",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/themepark_",
+                           "suffix":".png"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d193941735",
+                  "name":"Parque de agua",
+                  "pluralName":"Parques acuáticos",
+                  "shortName":"Parque de agua",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/waterpark_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d17b941735",
+                  "name":"Zoológico",
+                  "pluralName":"Zoológicos",
+                  "shortName":"Zoológico",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/zoo_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               }
+            ]
+         },
+         {
+            "id":"4d4b7105d754a06372d81259",
+            "name":"Facultad y Universidad",
+            "pluralName":"Facultades y Universidades",
+            "shortName":"Universidad y educación",
+            "icon":{
+               "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/default_",
+               "suffix":".png"
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d198941735",
+                  "name":"Edificio universitario académico",
+                  "pluralName":"Edificios universitarios académicos",
+                  "shortName":"Edificio académico",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/academicbuilding_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+                     {
+                        "id":"4bf58dd8d48988d199941735",
+                        "name":"Edificio universitario de Filosofía y Letras",
+                        "pluralName":"Edificios universitarios de Filosofía y Letras",
+                        "shortName":"Artes",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/default_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d19a941735",
+                        "name":"Edificio universitario de comunicaciones",
+                        "pluralName":"Edificios universitarios de comunicaciones",
+                        "shortName":"Comunicaciones",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/collegeacademicbuildings_communications_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d19e941735",
+                        "name":"Edificio universitario de ingeniería",
+                        "pluralName":"Edificios universitarios de ingeniería",
+                        "shortName":"Ingeniería",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/collegeacademicbuildings_engineering_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d19d941735",
+                        "name":"Edificio universitario de Historia",
+                        "pluralName":"Edificios universitarios de Historia",
+                        "shortName":"Historial",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/collegeacademicbuildings_history_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d19c941735",
+                        "name":"Edificio universitario de Matemáticas",
+                        "pluralName":"Edificios universitarios de Matemáticas",
+                        "shortName":"Matemáticas",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/collegeacademicbuildings_math_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d19b941735",
+                        "name":"Edificio universitario de Ciencias",
+                        "pluralName":"Edificios universitarios de Ciencias",
+                        "shortName":"Ciencia",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/collegeacademicbuildings_science_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d19f941735",
+                        "name":"Edificio universitario de Tecnología",
+                        "pluralName":"Edificios universitarios de Tecnología",
+                        "shortName":"Tecnología",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/collegeacademicbuildings_technology_",
+                           "suffix":".png"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d197941735",
+                  "name":"Edificio universitario administrativo",
+                  "pluralName":"Edificios universitarios administrativos",
+                  "shortName":"Edificio administrativo",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/administrativebuilding_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1af941735",
+                  "name":"Auditorio universitario",
+                  "pluralName":"Auditorios universitarios",
+                  "shortName":"Auditorio",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/auditorium_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1b1941735",
+                  "name":"Librería universitaria",
+                  "pluralName":"Librerías universitarias",
+                  "shortName":"Librería",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/bookstore_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1a1941735",
+                  "name":"Cafetería universitaria",
+                  "pluralName":"Cafeterías universitarias",
+                  "shortName":"Cafetería",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/cafeteria_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1a0941735",
+                  "name":"Aula universitaria",
+                  "pluralName":"Aulas universitarias",
+                  "shortName":"Salón de clases",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/classroom_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1b2941735",
+                  "name":"Gimnasio universitario",
+                  "pluralName":"Gimnasios universitarios",
+                  "shortName":"Gimnasio",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/gym_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1a5941735",
+                  "name":"Laboratorio universitario",
+                  "pluralName":"Laboratorios universitarios",
+                  "shortName":"Laboratorio",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/lab_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1a7941735",
+                  "name":"Biblioteca universitaria",
+                  "pluralName":"Bibliotecas universitarias",
+                  "shortName":"Biblioteca",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/library_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1aa941735",
+                  "name":"Patio interior universitario",
+                  "pluralName":"Patios interiores universitarios",
+                  "shortName":"Patio interior",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/quad_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1a9941735",
+                  "name":"Centro recreativo universitario",
+                  "pluralName":"Centros recreativos universitarios",
+                  "shortName":"Centro de recreación",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/reccenter_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1a3941735",
+                  "name":"Residencia universitaria de estudiantes",
+                  "pluralName":"Residencias universitarias de estudiantes",
+                  "shortName":"Residencia universitaria",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/residencehall_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1b4941735",
+                  "name":"Estadio universitario",
+                  "pluralName":"Estadios universitarios",
+                  "shortName":"Estadio",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+                     {
+                        "id":"4bf58dd8d48988d1bb941735",
+                        "name":"Diamante universitario de béisbol",
+                        "pluralName":"Diamantes universitarios de béisbol",
+                        "shortName":"Béisbol",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_baseball_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d1ba941735",
+                        "name":"Cancha universitaria de baloncesto",
+                        "pluralName":"Canchas universitarias de baloncesto",
+                        "shortName":"Baloncesto",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_basketball_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d1b9941735",
+                        "name":"Cancha universitaria de críquet",
+                        "pluralName":"Canchas universitarias de críquet",
+                        "shortName":"Críquet",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_cricket_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d1b8941735",
+                        "name":"Cancha universitaria de fútbol",
+                        "pluralName":"Canchas universitarias de fútbol",
+                        "shortName":"Fútbol",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_football_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d1b5941735",
+                        "name":"Cancha universitaria de hockey",
+                        "pluralName":"Canchas universitarias de hockey",
+                        "shortName":"Hockey",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_hockey_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d1b7941735",
+                        "name":"Cancha universitaria de fútbol",
+                        "pluralName":"Canchas universitarias de fútbol",
+                        "shortName":"Fútbol",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_soccer_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4e39a9cebd410d7aed40cbc4",
+                        "name":"Cancha universitaria de tenis",
+                        "pluralName":"Canchas universitarias de tenis",
+                        "shortName":"Cancha de tenis",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_tennis_",
+                           "suffix":".png"
+                        }
+                     },
+                     {
+                        "id":"4bf58dd8d48988d1b6941735",
+                        "name":"Pista universitaria de atletismo",
+                        "pluralName":"Pistas universitarias de atletismo",
+                        "shortName":"Atletismo",
+                        "icon":{
+                           "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/stadium_track_",
+                           "suffix":".png"
+                        }
+                     }
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1ac941735",
+                  "name":"Teatro universitario",
+                  "pluralName":"Teatros universitarios",
+                  "shortName":"Teatro",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/arts_entertainment\/performingarts_theater_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1a2941735",
+                  "name":"Colegio terciario",
+                  "pluralName":"Institutos terciarios",
+                  "shortName":"Colegio terciario",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/communitycollege_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1b0941735",
+                  "name":"Residencia universitaria (Varones)",
+                  "pluralName":"Residencias universitarias (Varones)",
+                  "shortName":"Residencia universitaria",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/frathouse_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1a8941735",
+                  "name":"Facultad y universidad en general",
+                  "pluralName":"Facultades y universidades en general",
+                  "shortName":"Educación",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/other_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1a6941735",
+                  "name":"Facultad de Derecho",
+                  "pluralName":"Facultades de Derecho",
+                  "shortName":"Facultad de Derecho",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/lawschool_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1b3941735",
+                  "name":"Facultad de medicina",
+                  "pluralName":"Facultades de Medicina",
+                  "shortName":"Facultad de medicina",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/medical_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d141941735",
+                  "name":"Residencia universitaria (mujeres)",
+                  "pluralName":"Residencias universitarias (Mujeres)",
+                  "shortName":"Residencia universitaria (mujeres)",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/frathouse_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1ab941735",
+                  "name":"Centro de estudiantes",
+                  "pluralName":"Centros de estudiantes",
+                  "shortName":"Centro de estudiantes",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/studentcenter_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1ad941735",
+                  "name":"Escuela vocacional",
+                  "pluralName":"Escuelas vocacionales",
+                  "shortName":"Escuela vocacional",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/tradeschool_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               },
+               {
+                  "id":"4bf58dd8d48988d1ae941735",
+                  "name":"Universidad",
+                  "pluralName":"Universidades",
+                  "shortName":"Universidad",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/education\/default_",
+                     "suffix":".png"
+                  },
+                  "categories":[
+
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

@@ -69,8 +69,6 @@ public class FoursquareApi {
         if (clientSecret == null) throw new IllegalArgumentException("clientSecret == null");
         this.clientId = clientId;
         this.clientSecret = clientSecret;
-        locale = Locale.ENGLISH;
-        client = new OkHttpClient();
     }
 
     /**
@@ -471,7 +469,7 @@ public class FoursquareApi {
      * @param locale a locale.
      */
     public void setLocale(Locale locale) {
-        this.locale = locale == null ? Locale.ENGLISH : locale;
+        this.locale = locale;
     }
 
     /**
@@ -499,12 +497,13 @@ public class FoursquareApi {
      */
     private String newRequest(String url) {
         LOGGER.debug("{}", url);
-        Request request = new Request.Builder().url(url)
+        Request.Builder requestBuilder = new Request.Builder().url(url)
             .header(Header.ACCEPT.getValue(), ContentType.APPLICATION_JSON.getMimeType())
-            .header(Header.ACCEPT_LANGUAGE.getValue(), locale.getLanguage())
-            .header(Header.ACCEPT_CHARSET.getValue(), StandardCharsets.UTF_8.name()).build();
+            .header(Header.ACCEPT_CHARSET.getValue(), StandardCharsets.UTF_8.name());
+        if (locale != null) requestBuilder.header(Header.ACCEPT_LANGUAGE.getValue(), locale.getLanguage());
+        if (client == null) client = new OkHttpClient();
         try {
-            Response response = client.newCall(request).execute();
+            Response response = client.newCall(requestBuilder.build()).execute();
             LOGGER.debug("Response code ---> {}", response.code());
             return response.body().string();
         } catch (IOException ex) {

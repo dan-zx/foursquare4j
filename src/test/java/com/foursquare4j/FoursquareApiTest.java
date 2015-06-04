@@ -17,7 +17,6 @@ package com.foursquare4j;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -149,7 +148,7 @@ public class FoursquareApiTest {
         assertThat(actualResult.getResponse().getItems()).isNotNull().isNotEmpty();
     }
 
-    private static Properties loadConfigProperties() throws IOException {
+    private static Properties loadConfigProperties() throws Exception {
         try (InputStream stream = FoursquareApiTest.class.getResourceAsStream("/fsq-configs.properties")) {
             Properties configs = new Properties();
             configs.load(stream);

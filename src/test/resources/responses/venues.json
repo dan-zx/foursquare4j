@@ -1,0 +1,224 @@
+{
+   "meta":{
+      "code":200
+   },
+   "notifications":[
+      {
+         "type":"notificationTray",
+         "item":{
+            "unreadCount":0
+         }
+      }
+   ],
+   "response":{
+      "venues":[
+         {
+            "id":"51eabef6498e10cf3aea7942",
+            "name":"Brooklyn Bridge Park - Pier 2",
+            "contact":{
+
+            },
+            "location":{
+               "address":"Furman St",
+               "crossStreet":"Brooklyn Bridge Park Greenway",
+               "lat":40.69961164689744,
+               "lng":-73.99835740533105,
+               "distance":145,
+               "cc":"US",
+               "city":"Brooklyn",
+               "state":"NY",
+               "country":"Estados Unidos",
+               "formattedAddress":[
+                  "Furman St (Brooklyn Bridge Park Greenway)",
+                  "Brooklyn, NY",
+                  "Estados Unidos"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d163941735",
+                  "name":"Parque",
+                  "pluralName":"Parques",
+                  "shortName":"Parque",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/park_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "checkinsCount":1919,
+               "usersCount":1475,
+               "tipCount":12
+            },
+            "specials":{
+               "count":0,
+               "items":[
+
+               ]
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nadie aquí",
+               "groups":[
+
+               ]
+            },
+            "referralId":"v-1433444709"
+         },
+         {
+            "id":"4d2cb2c677a2a1cd02c387b7",
+            "name":"QBE",
+            "contact":{
+
+            },
+            "location":{
+               "address":"80 Pine St",
+               "crossStreet":"Water St",
+               "lat":40.698978,
+               "lng":-74.00043,
+               "distance":119,
+               "postalCode":"10005",
+               "cc":"US",
+               "city":"Nueva York",
+               "state":"NY",
+               "country":"Estados Unidos",
+               "formattedAddress":[
+                  "80 Pine St (Water St)",
+                  "Nueva York, NY 10005",
+                  "Estados Unidos"
+               ]
+            },
+            "categories":[
+
+            ],
+            "verified":false,
+            "stats":{
+               "checkinsCount":1,
+               "usersCount":1,
+               "tipCount":0
+            },
+            "specials":{
+               "count":0,
+               "items":[
+
+               ]
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nadie aquí",
+               "groups":[
+
+               ]
+            },
+            "referralId":"v-1433444709"
+         },
+         {
+            "id":"4d9788e5daec224b4642333e",
+            "name":"Dr Shur",
+            "contact":{
+
+            },
+            "location":{
+               "address":"140 Elgar Pl",
+               "lat":40.698978,
+               "lng":-74.00043,
+               "distance":119,
+               "postalCode":"10475",
+               "cc":"US",
+               "city":"Bronx",
+               "state":"NY",
+               "country":"Estados Unidos",
+               "formattedAddress":[
+                  "140 Elgar Pl",
+                  "Bronx, NY 10475",
+                  "Estados Unidos"
+               ]
+            },
+            "categories":[
+
+            ],
+            "verified":false,
+            "stats":{
+               "checkinsCount":1,
+               "usersCount":1,
+               "tipCount":0
+            },
+            "specials":{
+               "count":0,
+               "items":[
+
+               ]
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nadie aquí",
+               "groups":[
+
+               ]
+            },
+            "referralId":"v-1433444709"
+         },
+         {
+            "id":"4dac4c974df01c19b1b0fc82",
+            "name":"Internal Medicine Associates",
+            "contact":{
+
+            },
+            "location":{
+               "address":"530 1st Ave",
+               "crossStreet":"30th street",
+               "lat":40.698978,
+               "lng":-74.00043,
+               "distance":119,
+               "postalCode":"10016",
+               "cc":"US",
+               "city":"Nueva York",
+               "state":"NY",
+               "country":"Estados Unidos",
+               "formattedAddress":[
+                  "530 1st Ave (30th street)",
+                  "Nueva York, NY 10016",
+                  "Estados Unidos"
+               ]
+            },
+            "categories":[
+               {
+                  "id":"4bf58dd8d48988d177941735",
+                  "name":"Consultorio médico",
+                  "pluralName":"Consultorios médicos",
+                  "shortName":"Consultorio médico",
+                  "icon":{
+                     "prefix":"https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/medical_doctorsoffice_",
+                     "suffix":".png"
+                  },
+                  "primary":true
+               }
+            ],
+            "verified":false,
+            "stats":{
+               "checkinsCount":2,
+               "usersCount":2,
+               "tipCount":0
+            },
+            "specials":{
+               "count":0,
+               "items":[
+
+               ]
+            },
+            "hereNow":{
+               "count":0,
+               "summary":"Nadie aquí",
+               "groups":[
+
+               ]
+            },
+            "referralId":"v-1433444709"
+         }
+      ],
+      "confident":false
+   }
+}

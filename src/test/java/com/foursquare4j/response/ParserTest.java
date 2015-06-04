@@ -31,9 +31,9 @@ public class ParserTest {
     public void testParseError() throws Exception {
         String json = getJsonFrom("responses/error.json");
         Result.Meta expectedMeta = new Result.Meta();
-        expectedMeta.setCode(410);
-        expectedMeta.setErrorType("param_error");
-        expectedMeta.setErrorDetail("The Foursquare API no longer supports requests that do not pass in a version parameter. For more details see https://developer.foursquare.com/overview/versioning");
+        expectedMeta.setCode(500);
+        expectedMeta.setErrorType("generic_error");
+        expectedMeta.setErrorDetail("Generic error");
         Result<User> expectedResult = new Result<>();
         expectedResult.setMeta(expectedMeta);
         Result<User> actualResult = Parser.parse(json, "user", User.class);
