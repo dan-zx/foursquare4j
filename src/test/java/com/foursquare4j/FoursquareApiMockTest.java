@@ -66,7 +66,7 @@ public class FoursquareApiMockTest {
             .setStatus(HttpStatus.OK.toString())
             .setBody(getJsonFrom("responses/access-token.json")));
         
-        AccessTokenResponse response = foursquareApi.getAccessToken("fakeCode");
+        AccessTokenResponse response = foursquareApi.getAccessToken("http://nowhere.com", "fakeCode");
         
         assertThat(response).isNotNull();
         assertThat(response.getException()).isNull();
@@ -79,7 +79,7 @@ public class FoursquareApiMockTest {
             .setStatus(HttpStatus.INTERNAL_SERVER_ERROR.toString())
             .setBody(getJsonFrom("responses/error-access-token.json")));
         
-        AccessTokenResponse response = foursquareApi.getAccessToken("fakeCode");
+        AccessTokenResponse response = foursquareApi.getAccessToken("http://nowhere.com", "fakeCode");
         
         assertThat(response).isNotNull();
         assertThat(response.getException()).isNotNull().hasMessage("invalid_grant");
